@@ -15,7 +15,7 @@ before_script:
 
 test:
   script:
-  - npm run test
+  - npm run test:ci
   coverage: /All\sfiles.*?\s+(\d+.\d+)/
 
 pages:

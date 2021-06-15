@@ -12,8 +12,8 @@ $ npm install tily
 ## Features
 - [Fast](#benchmarks)
 - [Small](#bundle-size)
-- [Fully tested](https://coveralls.io/github/loopx/utils)
-- [Documented](https://tinkoffcreditsystems.github.io/utils)
+- [Fully tested](https://coveralls.io/github/mindary/tily)
+- [Documented](https://mindary.gitr.io/tily/)
 - Purely functional
 - Modern codebase
 
