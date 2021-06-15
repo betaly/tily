@@ -1,0 +1,8 @@
+.github/
+/coverage
+generate
+plugins
+scripts
+*.json
+*.yml
+CHANGELOG.md
