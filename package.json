@@ -1,6 +1,6 @@
 {
   "name": "tily",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "author": "Mindary",
   "scripts": {
     "release": "node scripts/release.js",
