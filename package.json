@@ -1,6 +1,6 @@
 {
   "name": "tily",
-  "version": "2.8.0",
+  "version": "2.8.1",
   "author": "Mindary",
   "scripts": {
     "version": "cross-env CI=1 node scripts/prerelease.js",
@@ -29,16 +29,8 @@
   "sideEffects": false,
   "license": "Apache-2.0",
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.14.8",
-    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
-    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
-    "@babel/plugin-transform-runtime": "^7.14.5",
-    "@babel/preset-env": "^7.14.8",
-    "@babel/preset-react": "^7.14.5",
     "@types/fs-extra": "^9.0.12",
     "@types/jest": "^26.0.24",
-    "babel-core": "^6.26.3",
     "benchmark": "^2.1.4",
     "chalk": "^4.1.1",
     "coveralls": "^3.1.1",
