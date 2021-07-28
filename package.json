@@ -5,7 +5,7 @@
   "scripts": {
     "version": "cross-env CI=1 node scripts/prerelease.js",
     "prerelease": "cross-env CI=1 npm run build && npm run test",
-    "release": "np --no-2fa --contents ./dist",
+    "release": "np --no-2fa --no-tests --contents ./dist",
     "build": "tsc -p tsconfig.json",
     "benchmark": "ts-node --project tsconfig.benchmark.json benchmark.ts",
     "prebenchmark": "npm install --no-save ts-node lodash ramda lazy.js underscore",
