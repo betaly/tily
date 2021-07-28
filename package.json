@@ -60,5 +60,8 @@
   },
   "files": [
     "**/*"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
