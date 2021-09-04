@@ -7,7 +7,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   globals: {
     'ts-jest': {
-      tsConfig: {
+      tsconfig: {
         esModuleInterop: true,
       },
     },
@@ -15,4 +15,5 @@ module.exports = {
   testMatch: [
     '**/__tests__/*.+(ts|tsx|js|jsx)',
   ],
-};
+}
+
