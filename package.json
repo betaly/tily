@@ -12,7 +12,8 @@
     "docs:gh": "node ./generate/docs/gh.js",
     "docs:gl": "node ./generate/docs/gl.js",
     "test": "jest --coverage",
-    "test:ci": "npm run test -- --maxWorkers=4 && cat ./coverage/lcov.info | coveralls"
+    "test:ci": "npm run test -- --maxWorkers=4 && cat ./coverage/lcov.info | coveralls",
+    "test:ci:coveralls": "npm run test -- --maxWorkers=4"
   },
   "description": "Fast, small and purely functional utility library",
   "repository": "https://github.com/mindary/tily",
