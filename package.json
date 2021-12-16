@@ -1,6 +1,6 @@
 {
   "name": "tily",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "author": "Mindary",
   "scripts": {
     "version": "cross-env CI=1 node scripts/prerelease.js",
