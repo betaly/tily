@@ -15,7 +15,7 @@ function greeter(options?: {
     } else if (argsCount > 0) {
       cb(null, ...repeat(argsCount, 'hi'));
     }
-  }
+  };
 }
 
 function greetWithThis(cb: (error: any, ...args: any[]) => void) {
@@ -23,9 +23,17 @@ function greetWithThis(cb: (error: any, ...args: any[]) => void) {
 }
 
 describe('fromCallback', () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   it('should handle error', function() {
     return expect(fromCallback(cb => greeter({
-      error: new Error('A sample error')
+      error: new Error('A sample error'),
     })(cb))).rejects.toThrow('A sample error');
   });
 
@@ -49,10 +57,18 @@ describe('fromCallback', () => {
 
   it('should work with thisArg', async () => {
     const obj = {};
-    const result = await fromCallback(function (cb){
-      greetWithThis.call(this, cb)
+    const result = await fromCallback(function(cb) {
+      greetWithThis.call(this, cb);
     }, obj);
     expect(result).toBe(obj);
+  });
+
+  it('should support promised fn', (done) => {
+    fromCallback(async cb => {
+      await new Promise(resolve => setTimeout(resolve, 100));
+      cb();
+    }).then(() => done());
+    jest.advanceTimersByTime(1000);
   });
 
 });

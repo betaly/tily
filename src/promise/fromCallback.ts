@@ -23,7 +23,7 @@ export interface FromCallbackOptions {
  *   // ...
  *
  */
-export const fromCallback = (fn: (callback: (err?: any, ...args: any[]) => any) => void, thisArg?: any): Promise<any> => {
+export const fromCallback = (fn: (callback: (err?: any, ...args: any[]) => any) => void | Promise<void>, thisArg?: any): Promise<any> => {
   return new Promise((resolve, reject) => {
     fn.call(thisArg, (err: any, ...args: any[]) => {
       if (err) {
