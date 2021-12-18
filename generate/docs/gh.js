@@ -36,7 +36,7 @@ const publishDocs = () =>
     );
   });
 
-const buildTs = () => execa('tsc -p tsconfig.json', { shell: true });
+const buildTs = () => execa('tsc -p tsconfig.docs.json', { shell: true });
 
 const generate = async () => {
   await clearDocsPath();
