@@ -1,6 +1,6 @@
 {
   "name": "tily",
-  "version": "2.10.1",
+  "version": "2.10.2",
   "author": "Mindary",
   "scripts": {
     "copy:assets": "cpy package.json .npmignore LICENSE README.md CHANGELOG.md dist",
