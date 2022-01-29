@@ -21,8 +21,7 @@ test:
 pages:
   stage: deploy
   script:
-#    - npm run docs:gh
-    - npm run docs:gl
+    - npm run docs
     - mv docs/ public
   artifacts:
     paths:
