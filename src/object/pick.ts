@@ -1,9 +1,9 @@
 import curryN from '../function/curryN';
 import {Prop} from '../typings/types';
 
-type PickProps<K, O> = Pick<O, Exclude<keyof O, Exclude<keyof O, K>>>;
+export type PickProps<K, O> = Pick<O, Exclude<keyof O, Exclude<keyof O, K>>>;
 
-interface PickFunc {
+export interface PickFunc {
   <K extends Prop, O>(names: ReadonlyArray<K>, obj: O): PickProps<K, O>;
 
   <K extends Prop>(names: ReadonlyArray<K>): <O>(obj: O) => PickProps<K, O>;

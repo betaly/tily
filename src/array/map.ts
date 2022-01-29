@@ -1,6 +1,6 @@
 import curryN from '../function/curryN';
 
-type MapFunc<T, R> = (item: T, i: number, arr: ArrayLike<T>) => R;
+export type MapFunc<T, R> = (item: T, i: number, arr: ArrayLike<T>) => R;
 
 interface Map {
   <T, R>(fn: MapFunc<T, R>, arr: ArrayLike<T>): R[];

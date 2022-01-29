@@ -2,7 +2,7 @@ import curryN from '../function/curryN';
 import objectKeys from './keys';
 import assign from '../assign';
 
-type Func<T1, T2, R> = (
+export type MergeFunc<T1, T2, R> = (
   v1: T1[keyof T1] | T2[keyof T2],
   v2: T1[keyof T1] | T2[keyof T2],
   k: keyof (T1 & T2),
@@ -10,18 +10,18 @@ type Func<T1, T2, R> = (
   t2: T2,
 ) => R;
 
-interface MergeWith {
-  <T1, T2, R>(fn: Func<T1, T2, R>, a: T1, b: T2): Record<keyof (T1 & T2), R>;
+export interface MergeWith {
+  <T1, T2, R>(fn: MergeFunc<T1, T2, R>, a: T1, b: T2): Record<keyof (T1 & T2), R>;
 
-  <T1, R>(fn: Func<T1, any, R>, a: T1): <T2>(b: T2) => Record<keyof (T1 & T2), R>;
+  <T1, R>(fn: MergeFunc<T1, any, R>, a: T1): <T2>(b: T2) => Record<keyof (T1 & T2), R>;
 
-  <R>(fn: Func<any, any, R>): {
+  <R>(fn: MergeFunc<any, any, R>): {
     <T1, T2>(a: T1, b: T2): Record<keyof (T1 & T2), R>;
     <T1>(a: T1): <T2>(b: T2) => Record<keyof (T1 & T2), R>;
     <T>(...args: T[]): Record<keyof T, R>;
   };
 
-  <T, R>(fn: Func<any, any, R>, ...args: T[]): Record<keyof T, R>;
+  <T, R>(fn: MergeFunc<any, any, R>, ...args: T[]): Record<keyof T, R>;
 }
 
 /**
@@ -37,7 +37,7 @@ interface MergeWith {
  *
  * mergeWith((x, y) => x + y, { 'name': 'fred', 'age': 10 }, { 'age': 40 }); //=> { 'name': 'fred', 'age': 50 }
  */
-export const mergeWith = curryN(3, (fn: Func<any, any, any>, ...sources) => {
+export const mergeWith = curryN(3, (fn: MergeFunc<any, any, any>, ...sources) => {
   const result: Record<any, any> = assign(sources[0]);
 
   for (let i = 1; i < sources.length; i++) {

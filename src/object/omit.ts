@@ -2,9 +2,9 @@ import curryN from '../function/curryN';
 import objectKeys from './keys';
 import {Prop} from '../typings/types';
 
-type Omitted<T, K extends Prop> = Pick<T, Exclude<keyof T, K>>;
+export type Omitted<T, K extends Prop> = Pick<T, Exclude<keyof T, K>>;
 
-interface Omit {
+export interface Omit {
   <K extends Prop, O>(props: ReadonlyArray<K>, obj: O): Omitted<O, K>;
 
   <K extends Prop>(props: ReadonlyArray<K>): <O>(obj: O) => Omitted<O, K>;

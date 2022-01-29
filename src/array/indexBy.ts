@@ -1,8 +1,8 @@
 import curryN from '../function/curryN';
 
-type Pred<T> = (v: T, index: number, arr: ArrayLike<T>) => string;
+export type Pred<T> = (v: T, index: number, arr: ArrayLike<T>) => string;
 
-interface IndexBy {
+export interface IndexBy {
   <T>(fn: Pred<T>, list: ArrayLike<T>): Record<string, T>;
 
   <T>(fn: Pred<T>): (list: ArrayLike<T>) => Record<string, T>;

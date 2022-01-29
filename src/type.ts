@@ -1,4 +1,4 @@
-type Result =
+export type TypeType =
   | 'Object'
   | 'Number'
   | 'Boolean'
@@ -27,7 +27,7 @@ type Result =
  *      type([]); //=> "Array"
  *      type(/[A-z]/); //=> "RegExp"
  */
-export const type = (x): Result => {
+export const type = (x): TypeType => {
   if (x === null) {
     return 'Null';
   }

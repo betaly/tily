@@ -1,6 +1,6 @@
 import curryN from './curryN';
 
-type ApplyFunc<T> = (...args: T[]) => any;
+export type ApplyFunc<T> = (...args: T[]) => any;
 
 interface ApplyOrReturn {
   <T, F extends ApplyFunc<T>>(args: T[], test: F): ReturnType<F>;

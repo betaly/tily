@@ -3,15 +3,15 @@ import reduce from '../array/reduce';
 import pluck from '../array/pluck';
 import map from '../array/map';
 
-interface ConvergeAfterFn {
+export interface ConvergeAfterFn {
   (...args: any[]): any;
 }
 
-interface ConvergeArgFn {
+export interface ConvergeArgFn {
   (...args: any[]): any;
 }
 
-interface Converge {
+export interface Converge {
   (after: ConvergeAfterFn, fns: ConvergeArgFn[]): ConvergeArgFn;
 
   (after: ConvergeAfterFn): (fns: ConvergeArgFn[]) => ConvergeArgFn;

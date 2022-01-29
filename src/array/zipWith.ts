@@ -1,7 +1,7 @@
 import curryN from '../function/curryN';
 import {CurriedFunction2} from '../typings/types';
 
-type MapFunc<U, V, R> = (a: U, b: V) => R;
+export type MapFunc<U, V, R> = (a: U, b: V) => R;
 
 interface ZipWith {
   <U, V, R>(fn: MapFunc<U, V, R>, list1: ArrayLike<U>, list2: ArrayLike<V>): R[];

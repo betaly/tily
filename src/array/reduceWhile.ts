@@ -3,7 +3,7 @@ import curryN from '../function/curryN';
 import {ReduceFunc} from './reduce';
 import {CurriedFunction2, CurriedFunction3} from '../typings/types';
 
-type ReducePred<T, R> = (acc: R, elem: T, index: number, arr: ArrayLike<T>) => boolean;
+export type ReducePred<T, R> = (acc: R, elem: T, index: number, arr: ArrayLike<T>) => boolean;
 
 interface ReduceWhile {
   <T, R>(predicate: ReducePred<T, R>, fn: ReduceFunc<T, R>, acc: R, list: ArrayLike<T>): R;

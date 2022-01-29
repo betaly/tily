@@ -1,13 +1,13 @@
 import curryN from './curryN';
 import {Func} from '../typings/types';
 
-interface DebounceFunc<T extends () => any> {
+export interface DebounceFunc<T extends () => any> {
   cancel: Function;
 
   (...args: Parameters<T>): void;
 }
 
-interface Debounce {
+export interface Debounce {
   <F extends Func>(wait: number, fn: F): DebounceFunc<F>;
 
   (wait: number): <F extends Func>(fn: F) => DebounceFunc<F>;

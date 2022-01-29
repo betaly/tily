@@ -1,6 +1,6 @@
 import curryN from '../function/curryN';
 
-type KeyFunc<T> = (a: T) => string;
+export type KeyFunc<T> = (a: T) => string;
 
 interface UniqBy {
   <T>(fn: KeyFunc<T>, list: ArrayLike<T>): T[];

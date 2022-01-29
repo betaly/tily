@@ -1,8 +1,8 @@
 import curryN from '../curryN';
 import createCache from './createCache';
 
-type CacheFunc = () => ReturnType<typeof createCache>;
-type Hasher = (...args) => string;
+export type CacheFunc = () => ReturnType<typeof createCache>;
+export type Hasher = (...args) => string;
 
 interface MemoizeWith {
   <T extends Function>(getCache: CacheFunc, hasher: Hasher, fn: T): T;
