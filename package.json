@@ -1,7 +1,20 @@
 {
   "name": "tily",
   "version": "2.10.2",
-  "author": "Mindary",
+  "description": "Fast, small and purely functional utility library",
+  "author": "TY",
+  "repository": "https://github.com/betaly/tily",
+  "bugs": "https://github.com/betaly/tily/issues",
+  "keywords": [
+    "utils",
+    "ramda",
+    "lodash",
+    "underscore",
+    "curry",
+    "performance"
+  ],
+  "sideEffects": false,
+  "license": "Apache-2.0",
   "scripts": {
     "copy:assets": "cpy package.json .npmignore LICENSE README.md CHANGELOG.md dist",
     "version": "npm run copy:assets",
@@ -15,20 +28,6 @@
     "test:ci": "npm run test -- --maxWorkers=4 && cat ./coverage/lcov.info | coveralls",
     "test:ci:coveralls": "npm run test -- --maxWorkers=4"
   },
-  "description": "Fast, small and purely functional utility library",
-  "repository": "https://github.com/mindary/tily",
-  "bugs": "https://github.com/mindary/tily/issues",
-  "keywords": [
-    "mindary",
-    "utils",
-    "ramda",
-    "lodash",
-    "underscore",
-    "curry",
-    "performance"
-  ],
-  "sideEffects": false,
-  "license": "Apache-2.0",
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
     "@types/jest": "^27.0.3",
