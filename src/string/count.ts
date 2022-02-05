@@ -6,7 +6,7 @@
  *
  * @example
  *
- * count('Hello World', 'o'); //=> 2
+ *      count('Hello World', 'o'); //=> 2
  */
 export function count(value: string, character: string): number {
   let result = 0;

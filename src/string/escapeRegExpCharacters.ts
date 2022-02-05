@@ -5,7 +5,7 @@
  *
  * @example
  *
- * escapeRegExpCharacters('/{([^}]+)}/g')); //=> '/\\{\\(\\[\\^\\}\\]\\+\\)\\}/g'
+ *      escapeRegExpCharacters('/{([^}]+)}/g')); //=> '/\\{\\(\\[\\^\\}\\]\\+\\)\\}/g'
  */
 export function escapeRegExpCharacters(value: string): string {
   return value.replace(/[\\{}*+?|^$.\[\]()]/g, '\\$&');

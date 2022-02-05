@@ -8,7 +8,7 @@ const regexEscape = /[\\^$.*+?()[\]{}|]/g;
  * @returns {string} Returns the escaped string.
  * @example
  *
- * escapeRegExp('[test](utils)'); // => '\[test\]\(utils\)'
+ *      escapeRegExp('[test](utils)'); // => '\[test\]\(utils\)'
  */
 export const escapeRegExp = (str = '') => str.replace(regexEscape, '\\$&');
 

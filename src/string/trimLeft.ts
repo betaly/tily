@@ -5,7 +5,7 @@
  * @returns {String} Returns the trimmed string.
  * @example
  *
- * trimLeft('  abc  '); // => 'abc   '
+ *      trimLeft('  abc  '); // => 'abc   '
  *
  */
 export const trimLeft = (str = '') => str.replace(/^[\s\uFEFF\xA0]+/g, '');

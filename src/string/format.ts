@@ -9,9 +9,9 @@ const _formatRegexp = /{(\d+)}/g;
  *
  * @example
  *
- * format('Foo {0} Bar {1}{2}', 'yes');             //=> 'Foo yes Bar {1}{2}'
- * format('Foo {0} Bar {1}{2}', 'yes', undefined);  //=> 'Foo yes Bar undefined{2}'
- * format('Foo {0} Bar {1}{2}', 'yes', 5, false);   //=> 'Foo yes Bar 5false'
+ *      format('Foo {0} Bar {1}{2}', 'yes');             //=> 'Foo yes Bar {1}{2}'
+ *      format('Foo {0} Bar {1}{2}', 'yes', undefined);  //=> 'Foo yes Bar undefined{2}'
+ *      format('Foo {0} Bar {1}{2}', 'yes', 5, false);   //=> 'Foo yes Bar 5false'
  *
  */
 export function format(value: string, ...args: any[]): string {

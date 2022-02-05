@@ -18,7 +18,7 @@ const replace = (char) => htmlUnescapes[char];
  * @returns {string} Returns the unescaped string.
  * @example
  *
- * unescape('fred, barney, &amp; pebbles'); // => 'fred, barney, & pebbles'
+ *      unescape('fred, barney, &amp; pebbles'); // => 'fred, barney, & pebbles'
  */
 export const unescape = (str = '') => str.replace(unescapeRegExp, replace);
 

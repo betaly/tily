@@ -7,9 +7,9 @@
  *
  * @example
  *
- * truncate('hello world', 100);  //=> 'hello world'
- * truncate('hello world', 5);    //=> 'hello...'
- * truncate('你好，世界', 2);       //=> '你好…'
+ *      truncate('hello world', 100);  //=> 'hello world'
+ *      truncate('hello world', 5);    //=> 'hello...'
+ *      truncate('你好，世界', 2);       //=> '你好…'
  */
 export function truncate(value: string, maxLength: number, suffix = '…'): string {
   if (value.length <= maxLength) {

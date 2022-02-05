@@ -7,8 +7,8 @@
  *
  * @example
  *
- * rtrim('Helloabcabc', 'abc'); //=> 'Hello'
- * rtrim('  Hello  ');          //=> '  Hello'
+ *      rtrim('Helloabcabc', 'abc'); //=> 'Hello'
+ *      rtrim('  Hello  ');          //=> '  Hello'
  *
  */
 export function rtrim(haystack: string, needle: string = ' '): string {

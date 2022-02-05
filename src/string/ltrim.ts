@@ -7,8 +7,8 @@
  *
  * @example
  *
- * ltrim('abcabcHello', 'abc'); //=> 'Hello'
- * ltrim('  Hello  ');          //=> 'Hello  '
+ *      ltrim('abcabcHello', 'abc'); //=> 'Hello'
+ *      ltrim('  Hello  ');          //=> 'Hello  '
  */
 export function ltrim(haystack: string, needle: string = ' '): string {
   if (!haystack || !needle) {

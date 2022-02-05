@@ -5,9 +5,9 @@
  *
  * @example
  *
- * isFalsyOrWhitespace('');           //=> true;
- * isFalsyOrWhitespace('  ');         //=> true;
- * isFalsyOrWhitespace(' hello ');    //=> false;
+ *      isFalsyOrWhitespace('');           //=> true;
+ *      isFalsyOrWhitespace('  ');         //=> true;
+ *      isFalsyOrWhitespace(' hello ');    //=> false;
  *
  */
 export function isFalsyOrWhitespace(str: string | undefined): boolean {
