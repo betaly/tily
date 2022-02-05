@@ -7,7 +7,7 @@
 ## 2.1.0
 + add array/groupBy to group values in array by the list of predicates
 + add object/propSetBy and object/pathSetBy functions to allow setting values based on the result of function call
-+ add utils/assign to create a shallow copy based on type
++ add assign to create a shallow copy based on type
 + object/propSet, object/pathSet won't generate new reference when the object itself doesn't change
 + extend types for object/propApply, object/pathApply functions
 
