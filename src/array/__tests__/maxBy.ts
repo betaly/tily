@@ -1,6 +1,6 @@
 import maxBy from '../maxBy';
 
-describe('utils/array/maxBy', () => {
+describe('array/maxBy', () => {
   it('test', () => {
     const f = jest.fn((x) => -x);
 

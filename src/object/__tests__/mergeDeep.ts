@@ -2,7 +2,7 @@ import mergeDeep from '../mergeDeep';
 
 const React = require('react');
 
-describe('utils/object/mergeDeep', () => {
+describe('object/mergeDeep', () => {
   it('should deeply merge objects', () => {
     expect(mergeDeep({a: 1}, {a: 2, b: 3})).toEqual({a: 2, b: 3});
     expect(mergeDeep({a: [1, 2, 3]}, {a: [4, 5, 6, 7], b: 3})).toEqual({a: [4, 5, 6, 7], b: 3});

@@ -1,6 +1,6 @@
 import pathSetBy from '../pathSetBy';
 
-describe('utils/object/pathSetBy', () => {
+describe('object/pathSetBy', () => {
   it('should call function with current value and set the result of call', () => {
     const fn = jest.fn((val) => val + 1);
     const obj = {a: {b: {c: 1}}};

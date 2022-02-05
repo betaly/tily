@@ -1,6 +1,6 @@
 import uniqueId from '../uniqueId';
 
-describe('utils/uniqueId', () => {
+describe('uniqueId', () => {
   it('should return different ids', () => {
     const a = uniqueId();
     const b = uniqueId();

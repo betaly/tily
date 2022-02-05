@@ -1,6 +1,6 @@
 import sort from '../sort';
 
-describe('utils/array/sort', () => {
+describe('array/sort', () => {
   it('should return new sorted array', () => {
     const arr1 = [4, 5, 6, 2, 2, 3, 4, 1];
 

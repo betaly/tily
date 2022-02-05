@@ -1,6 +1,6 @@
 import isElement from '../element';
 
-describe('utils/is/element', () => {
+describe('is/element', () => {
   it('should return true for dom elements', () => {
     expect(isElement(document.createElement('div'))).toBe(true);
     expect(isElement(document.body)).toBe(true);

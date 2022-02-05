@@ -1,6 +1,6 @@
 import startsWith from '../startsWith';
 
-describe('utils/string/startsWith', () => {
+describe('string/startsWith', () => {
   it('test', () => {
     expect(startsWith('a', 'abc')).toBe(true);
     expect(startsWith('b', 'abc')).toBe(false);

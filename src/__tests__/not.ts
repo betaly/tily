@@ -1,6 +1,6 @@
 import not from '../not';
 
-describe('utils/not', () => {
+describe('not', () => {
   it('returns the logical inverse of passed arg', () => {
     expect(not(1)).toBe(false);
     expect(not(0)).toBe(true);

@@ -1,6 +1,6 @@
 import findIndex from '../findIndex';
 
-describe('utils/array/findIndex', () => {
+describe('array/findIndex', () => {
   it('should return founded value or undefined otherwise', () => {
     expect(findIndex((a) => a > 3, [1, 2, 3, 4])).toBe(3);
     expect(findIndex((a: number) => a % 2 === 0)([1, 2, 3, 4])).toBe(1);

@@ -1,6 +1,6 @@
 import throttle from '../throttle';
 
-describe('utils/function/throttle', () => {
+describe('function/throttle', () => {
   it('should call function at most once at "wait" ms period', () => {
     // eslint-disable-line max-statements
     let context;

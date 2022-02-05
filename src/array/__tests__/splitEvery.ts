@@ -1,6 +1,6 @@
 import splitEvery from '../splitEvery';
 
-describe('utils/array/splitEvery', () => {
+describe('array/splitEvery', () => {
   describe('splitting arrays', () => {
     it('empty array', () => {
       expect(splitEvery(1, [])).toEqual([]);

@@ -1,6 +1,6 @@
 import uniq from '../uniq';
 
-describe('utils/array/uniq', () => {
+describe('array/uniq', () => {
   it('should return unchanged', () => {
     expect(uniq([1, 2, 3, 4])).toEqual([1, 2, 3, 4]);
     expect(uniq([{}, 1, '', [], 5])).toEqual([{}, 1, '', [], 5]);

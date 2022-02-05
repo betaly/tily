@@ -1,6 +1,6 @@
 import prop from '../prop';
 
-describe('utils/object/prop', () => {
+describe('object/prop', () => {
   it('should return undefined if prop is not set', () => {
     expect(prop('test', undefined)).toBeUndefined();
     expect(prop('test', null)).toBeUndefined();

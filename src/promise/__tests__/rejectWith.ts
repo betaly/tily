@@ -1,7 +1,7 @@
 import toLower from '../../string/toLower';
 import rejectWith from '../rejectWith';
 
-describe('utils/promise/rejectWith', () => {
+describe('promise/rejectWith', () => {
   it('should reject with transformed value', () => {
     expect(rejectWith(toLower, 'ERROR')).rejects.toBe('error');
   });

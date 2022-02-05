@@ -1,6 +1,6 @@
 import isBoolean from '../boolean';
 
-describe('utils/is/boolean', () => {
+describe('is/boolean', () => {
   it('test', () => {
     expect(isBoolean(true)).toBe(true);
     expect(isBoolean(false)).toBe(true);

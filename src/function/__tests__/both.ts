@@ -1,6 +1,6 @@
 import both from '../both';
 
-describe('utils/function/both', () => {
+describe('function/both', () => {
   const t = jest.fn((x) => true);
   const f = jest.fn((x) => false);
 

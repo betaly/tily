@@ -1,6 +1,6 @@
 import F from '../F';
 
-describe('utils/function/F', () => {
+describe('function/F', () => {
   it('should return false', () => {
     expect(F()).toBe(false);
     expect(F(1, 2, 3)).toBe(false);

@@ -1,6 +1,6 @@
 import applyOrReturn from '../applyOrReturn';
 
-describe('utils/function/applyOrReturn', () => {
+describe('function/applyOrReturn', () => {
   it('test', () => {
     const f = jest.fn((x) => x);
 

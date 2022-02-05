@@ -1,6 +1,6 @@
 import repeat from '../repeat';
 
-describe('utils/string/repeat', () => {
+describe('string/repeat', () => {
   it('should return repeted symbol', () => {
     expect(repeat(4, 't')).toEqual('tttt');
     expect(repeat(4, ')')).toEqual('))))');

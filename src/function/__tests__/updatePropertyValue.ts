@@ -1,6 +1,6 @@
 import updatePropertyValue from '../updatePropertyValue';
 
-describe('utils/function/updatePropertyValue', () => {
+describe('function/updatePropertyValue', () => {
   const checkPropertyChange = (obj, propName, propValue, expectValue) => {
     const updatedObj = updatePropertyValue(propName, propValue, obj);
 

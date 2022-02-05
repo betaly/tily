@@ -1,7 +1,7 @@
 import toLower from '../../string/toLower';
 import resolveWith from '../resolveWith';
 
-describe('utils/promise/resolveWith', () => {
+describe('promise/resolveWith', () => {
   it('should resolve with transformed value', () => {
     expect(resolveWith(toLower, 'TEST')).resolves.toBe('test');
   });

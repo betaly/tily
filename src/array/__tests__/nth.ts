@@ -1,6 +1,6 @@
 import nth from '../nth';
 
-describe('utils/array/nth', () => {
+describe('array/nth', () => {
   it('should return value at given index', () => {
     const arr = [1, 2, 3, {a: 1}, [3, 4]];
 

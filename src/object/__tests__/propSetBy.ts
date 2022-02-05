@@ -1,6 +1,6 @@
 import propSetBy from '../propSetBy';
 
-describe('utils/object/propSetBy', () => {
+describe('object/propSetBy', () => {
   it('should call function with current prop and set the result of call', () => {
     const fn = jest.fn((val) => val + 1);
     const obj = {a: 1};

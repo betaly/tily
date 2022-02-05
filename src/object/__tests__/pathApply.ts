@@ -1,7 +1,7 @@
 import pathApply from '../pathApply';
 import identity from '../../function/identity';
 
-describe('utils/object/pathApply', () => {
+describe('object/pathApply', () => {
   it('should call fn with value at path', () => {
     const f = jest.fn(identity);
     const obj = {a: {b: {c: 'test'}}};

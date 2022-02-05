@@ -1,6 +1,6 @@
 import adjust from '../adjust';
 
-describe('utils/array/adjust', () => {
+describe('array/adjust', () => {
   const add = (x: number) => x + 1;
 
   it('applies the given function to the value at the given index of the supplied array', () => {

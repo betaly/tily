@@ -1,6 +1,6 @@
 import dropLast from '../dropLast';
 
-describe('utils/array/dropLast', () => {
+describe('array/dropLast', () => {
   it('should dropLast', () => {
     expect(dropLast(1, ['foo', 'bar', 'baz'])).toEqual(['foo', 'bar']);
     expect(dropLast(2)(['foo', 'bar', 'baz'])).toEqual(['foo']);

@@ -1,6 +1,6 @@
 import escapeRegExp from '../escapeRegExp';
 
-describe('utils/string/escapeRegExp', () => {
+describe('string/escapeRegExp', () => {
   it('escape characters \\ ^ $ . * + ? ( ) [ ] { } |', () => {
     expect(escapeRegExp('no escape strings')).toBe('no escape strings');
     expect(escapeRegExp('[test](utils)')).toBe('\\[test\\]\\(utils\\)');

@@ -1,6 +1,6 @@
 import merge from '../merge';
 
-describe('utils/object/merge', () => {
+describe('object/merge', () => {
   it('should return merged object', () => {
     const a = {a: 1, b: 2};
     const b: any = {c: 3};

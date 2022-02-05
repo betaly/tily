@@ -1,6 +1,6 @@
 import groupBy from '../groupBy';
 
-describe('utils/array/groupBy', () => {
+describe('array/groupBy', () => {
   it('test', () => {
     const isPositive = jest.fn((x) => x > 0);
     const isNegative = jest.fn((x) => x < 0);

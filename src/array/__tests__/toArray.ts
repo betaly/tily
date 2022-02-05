@@ -1,6 +1,6 @@
 import toArray from '../toArray';
 
-describe('utils/array/toArray', () => {
+describe('array/toArray', () => {
   it('should return array', () => {
     expect(toArray([1, 2, 3])).toEqual([1, 2, 3]);
     expect(toArray(null)).toEqual([]);

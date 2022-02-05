@@ -1,6 +1,6 @@
 import either from '../either';
 
-describe('utils/function/either', () => {
+describe('function/either', () => {
   const t = jest.fn((x) => true);
   const f = jest.fn((x) => false);
 

@@ -1,6 +1,6 @@
 import camelCaseName from '../camelCaseName';
 
-describe('utils/string/camelCaseName', () => {
+describe('string/camelCaseName', () => {
   it.each([
     ['', ''],
     ['abc', 'abc'],

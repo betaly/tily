@@ -1,6 +1,6 @@
 import nothing from '../nothing';
 
-describe('utils/function/nothing', () => {
+describe('function/nothing', () => {
   it('should return undefined', () => {
     expect(nothing()).toBe(undefined);
     expect(nothing(1, 2, 3)).toBe(undefined);

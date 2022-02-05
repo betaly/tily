@@ -1,6 +1,6 @@
 import curryN from '../curryN';
 
-describe('utils/function/curryN', () => {
+describe('function/curryN', () => {
   it('should return curried function with specified arity', () => {
     const f = jest.fn(() => 3);
     let g: any = curryN(3, f);

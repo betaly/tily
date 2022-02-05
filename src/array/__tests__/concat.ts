@@ -1,6 +1,6 @@
 import concat from '../concat';
 
-describe('utils/array/concat', () => {
+describe('array/concat', () => {
   it('should concatenate two arrays', () => {
     expect(concat([1, 2], [3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
     expect(concat([], [1])).toEqual([1]);

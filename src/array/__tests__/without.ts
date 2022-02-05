@@ -1,6 +1,6 @@
 import without from '../without';
 
-describe('utils/array/without', () => {
+describe('array/without', () => {
   it('should return array without 1 and 2', () => {
     expect(without([1, 2], [1, 2, 1, 3, 4])).toEqual([3, 4]);
   });

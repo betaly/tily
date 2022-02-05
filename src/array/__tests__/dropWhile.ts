@@ -1,6 +1,6 @@
 import dropWhile from '../dropWhile';
 
-describe('utils/array/dropWhile', () => {
+describe('array/dropWhile', () => {
   it('test', () => {
     const f = jest.fn((x: number) => x < 3);
     const arr = [1, 2, 3, 4, 5];

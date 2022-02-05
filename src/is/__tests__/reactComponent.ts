@@ -1,4 +1,4 @@
-describe('utils/is/reactComponent', () => {
+describe('is/reactComponent', () => {
   const {createElement, PureComponent, memo, lazy} = require('react');
 
   let mockReactIs;

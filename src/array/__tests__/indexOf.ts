@@ -1,6 +1,6 @@
 import indexOf from '../indexOf';
 
-describe('utils/array/indexOf', () => {
+describe('array/indexOf', () => {
   it('returns a number indicating an object\'s position in a list', () => {
     const list = [1, 2, 3, 4];
 

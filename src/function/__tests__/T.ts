@@ -1,6 +1,6 @@
 import T from '../T';
 
-describe('utils/function/T', () => {
+describe('function/T', () => {
   it('should return true', () => {
     expect(T()).toBe(true);
     expect(T(1, 2, 3)).toBe(true);

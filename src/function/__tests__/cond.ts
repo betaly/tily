@@ -3,7 +3,7 @@ import identity from '../identity';
 import T from '../T';
 import F from '../F';
 
-describe('utils/function/cond', () => {
+describe('function/cond', () => {
   it('should call fn if predicate satisfies', () => {
     const fns: [(x) => boolean, <T>(x) => T][] = [
       [jest.fn(F), jest.fn(identity)],

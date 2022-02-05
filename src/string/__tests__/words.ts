@@ -1,6 +1,6 @@
 import words from '../words';
 
-describe('utils/string/words', () => {
+describe('string/words', () => {
   it.each([
     ['', ['']],
     ['foo', ['foo']],

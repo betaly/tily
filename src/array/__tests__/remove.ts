@@ -1,6 +1,6 @@
 import remove from '../remove';
 
-describe('utils/array/remove', () => {
+describe('array/remove', () => {
   it('should remove third and fourth element', () => {
     expect(remove(2, 3, [1, 2, 3, 4, 5, 6, 7, 8])).toEqual([1, 2, 6, 7, 8]);
   });

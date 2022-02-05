@@ -1,6 +1,6 @@
 import isArrayLike from '../arrayLike';
 
-describe('utils/is/arrayLike', () => {
+describe('is/arrayLike', () => {
   it('test', () => {
     expect(isArrayLike(5)).toBe(false);
     expect(isArrayLike([])).toBe(true);

@@ -1,6 +1,6 @@
 import type from '../type';
 
-describe('utils/type', () => {
+describe('type', () => {
   it('should return type', () => {
     expect(type(undefined)).toBe('Undefined');
     expect(type(null)).toBe('Null');

@@ -1,7 +1,7 @@
 import T from '../../function/T';
 import reduceWhile from '../reduceWhile';
 
-describe('utils/array/reduceWhile', () => {
+describe('array/reduceWhile', () => {
   it('should reduce normally while predicate returns truthy values', () => {
     expect(reduceWhile(T, (x, y) => 10 * x + y, 0, [1, 2, 3, 4, 5])).toBe(12345);
   });

@@ -1,7 +1,7 @@
 import identity from '../../function/identity';
 import propApply from '../propApply';
 
-describe('utils/object/propApply', () => {
+describe('object/propApply', () => {
   it('should apply func to prop value', () => {
     const f = jest.fn(identity);
 

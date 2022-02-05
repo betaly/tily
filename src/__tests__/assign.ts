@@ -1,6 +1,6 @@
 import assign from '../assign';
 
-describe('utils/assign', () => {
+describe('assign', () => {
   it('should create new object', () => {
     const a = {a: 1};
     const b = {b: 2};

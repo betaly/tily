@@ -1,7 +1,7 @@
 import uniqBy from '../uniqBy';
 import toString from '../../string/toString';
 
-describe('utils/array/uniqBy', () => {
+describe('array/uniqBy', () => {
   it('should return unchanged', () => {
     expect(uniqBy(toString, [1, 2, 3, 4])).toEqual([1, 2, 3, 4]);
     expect(uniqBy(toString)([{}, 1, '', 5])).toEqual([{}, 1, '', 5]);

@@ -1,6 +1,6 @@
 import shuffle from '../shuffle';
 
-describe('utils/array/shuffle', () => {
+describe('array/shuffle', () => {
   let originalMathRandom;
 
   beforeAll(() => {

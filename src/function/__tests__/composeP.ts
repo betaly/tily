@@ -1,6 +1,6 @@
 import composeP from '../composeP';
 
-describe('utils/function/composeP', () => {
+describe('function/composeP', () => {
   const appendP = (y: number) => (x: number) => Promise.resolve(x * 10 + y);
 
   it('should throw error when no arguments passed', () => {

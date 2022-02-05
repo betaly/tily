@@ -1,6 +1,6 @@
 import tap from '../tap';
 
-describe('utils/function/tap', () => {
+describe('function/tap', () => {
   it('should call function and return passed argument', () => {
     const fn = jest.fn();
     const x = {test: '1222'};

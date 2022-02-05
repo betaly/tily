@@ -1,6 +1,6 @@
 import defaultTo from '../defaultTo';
 
-describe('utils/defaultTo', () => {
+describe('defaultTo', () => {
   it('test defaultTo', () => {
     const d = defaultTo(42);
 

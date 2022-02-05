@@ -1,6 +1,6 @@
 import flip from '../flip';
 
-describe('utils/function/flip', () => {
+describe('function/flip', () => {
   it('should return new function with reversed two first arguments', () => {
     const f: (x: number, y: string) => number = jest.fn((a, b) => a - +b);
     const g = flip(f);

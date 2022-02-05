@@ -1,6 +1,6 @@
 import isBuffer from '../buffer';
 
-describe('utils/is/boolean', () => {
+describe('is/boolean', () => {
   it('test', () => {
     expect(isBuffer(Buffer.from([4]))).toBe(true);
     expect(isBuffer(Buffer.alloc(4))).toBe(true);

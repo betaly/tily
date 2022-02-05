@@ -1,6 +1,6 @@
 import all from '../all';
 
-describe('utils/object/all', () => {
+describe('object/all', () => {
   it('test', () => {
     const isBiggerThanZero = (x) => x > 0;
 

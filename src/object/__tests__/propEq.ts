@@ -1,6 +1,6 @@
 import propEq from '../propEq';
 
-describe('utils/object/propEq', () => {
+describe('object/propEq', () => {
   it('should return true if prop is equal to value', () => {
     expect(propEq('a', 1, {a: 1})).toBe(true);
 

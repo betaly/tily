@@ -1,6 +1,6 @@
 import zipWith from '../zipWith';
 
-describe('utils/array/zipWith', () => {
+describe('array/zipWith', () => {
   it('test zipWith', () => {
     const f = jest.fn((x, y) => x + y);
 

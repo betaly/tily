@@ -1,6 +1,6 @@
 import reduce from '../reduce';
 
-describe('utils/object/reduce', () => {
+describe('object/reduce', () => {
   it('reduce for objects', () => {
     const f = jest.fn((a, v, k) => a + v);
     const obj = {a: 1, b: 2, c: 3};

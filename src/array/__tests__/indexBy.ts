@@ -1,6 +1,6 @@
 import indexBy from '../indexBy';
 
-describe('utils/array/indexBy', () => {
+describe('array/indexBy', () => {
   it('should return object', () => {
     const f = jest.fn((x) => x.id);
     const arr = [{id: 1}, {id: 2}, {id: 1, a: 3}, {id: 3, d: 4}];

@@ -1,6 +1,6 @@
 import update from '../update';
 
-describe('utils/array/adjust', () => {
+describe('array/adjust', () => {
   it('should update second element', () => {
     expect(update(1, 11, [0, 1, 2])).toEqual([0, 11, 2]);
   });

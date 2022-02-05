@@ -1,6 +1,6 @@
 import map from '../map';
 
-describe('utils/array/map', () => {
+describe('array/map', () => {
   it('should return new mapped array', () => {
     const arr = [1, 2, 3, 4, 6];
     const f = jest.fn((x) => x * 2);

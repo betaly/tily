@@ -2,7 +2,7 @@ import defaultsDeep from '../defaultsDeep';
 
 const React = require('react');
 
-describe('utils/object/defaultsDeep', () => {
+describe('object/defaultsDeep', () => {
   it('should deeply assign objects', () => {
     expect(defaultsDeep({a: 1}, {a: 2, b: 3})).toEqual({a: 1, b: 3});
     expect(defaultsDeep({a: [1, 2, 3]}, {a: [4, 5, 6, 7], b: 3})).toEqual({a: [1, 2, 3], b: 3});

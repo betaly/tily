@@ -9,7 +9,7 @@ const jestFn = (fn) => {
   return mock;
 };
 
-describe('utils/function/curry', () => {
+describe('function/curry', () => {
   it('should call curried function if enough parameters', () => {
     const f = jestFn(() => 'result');
 

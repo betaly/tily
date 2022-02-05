@@ -1,6 +1,6 @@
 import kebabCaseName from '../kebabCaseName';
 
-describe('utils/string/kebabCaseName', () => {
+describe('string/kebabCaseName', () => {
   it.each([
     ['', ''],
     ['abc', 'abc'],

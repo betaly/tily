@@ -1,6 +1,6 @@
 import isFunction from '../function';
 
-describe('utils/is/function', () => {
+describe('is/function', () => {
   it('true for functions', () => {
     expect(isFunction(() => {
     })).toBe(true);

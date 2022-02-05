@@ -1,6 +1,6 @@
 import allPass from '../anyPass';
 
-describe('utils/function/allPass', () => {
+describe('function/allPass', () => {
   it('should return false', () => {
     const f1 = jest.fn((x) => false);
     const f2 = jest.fn(() => false);

@@ -1,6 +1,6 @@
 import map from '../map';
 
-describe('utils/object/map', () => {
+describe('object/map', () => {
   it('should return mapped object', () => {
     const f = jest.fn((x) => x * 2);
     const obj = {a: 1, b: 2, c: 3};

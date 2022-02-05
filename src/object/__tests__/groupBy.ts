@@ -2,7 +2,7 @@ import groupBy from '../groupBy';
 import {expectType} from 'ts-expect';
 import {ArrValues, ObjValues} from '../../typings/types';
 
-describe('utils/object/groupBy', () => {
+describe('object/groupBy', () => {
   it('group object values by function', () => {
     const obj = {a: {b: 1, c: 2}, b: {b: 3}, c: {b: 1, d: 5}};
     const fn = jest.fn((x) => x.b);

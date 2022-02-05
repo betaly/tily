@@ -1,6 +1,6 @@
 import optional from '../optional';
 
-describe('utils/function/optional', () => {
+describe('function/optional', () => {
   it('test', () => {
     const f = jest.fn((x) => x === -1);
     const g = optional(f);

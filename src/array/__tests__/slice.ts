@@ -1,6 +1,6 @@
 import slice from '../slice';
 
-describe('utils/array/slice', () => {
+describe('array/slice', () => {
   it('should return sliced array', () => {
     expect(slice(1, 3, ['a', 'b', 'c', 'd'])).toEqual(['b', 'c']);
     expect(slice(0, -1, ['a', 'b', 'c', 'd'])).toEqual(['a', 'b', 'c']);

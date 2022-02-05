@@ -1,6 +1,6 @@
 import pathOr from '../pathOr';
 
-describe('utils/object/pathOr', () => {
+describe('object/pathOr', () => {
   it('test', () => {
     expect(pathOr(['a', 'b'], 3, {a: {b: 2}})).toBe(2);
     expect(pathOr(['a', 'b'], 3, {a: {}})).toBe(3);

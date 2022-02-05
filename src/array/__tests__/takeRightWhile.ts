@@ -1,6 +1,6 @@
 import takeRightWhile from '../takeRightWhile';
 
-describe('utils/array/takeRightWhile', () => {
+describe('array/takeRightWhile', () => {
   it('array case', () => {
     const f = jest.fn((x) => x > 3);
     const arr = [1, 2, 3, 4, 5, 5];

@@ -1,6 +1,6 @@
 import always from '../always';
 
-describe('utils/function/always', () => {
+describe('function/always', () => {
   it('should return new function', () => {
     const f = always('test');
 

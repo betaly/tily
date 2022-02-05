@@ -1,6 +1,6 @@
 import compose from '../compose';
 
-describe('utils/function/compose', () => {
+describe('function/compose', () => {
   it('should return combination of passed functions', () => {
     const f1 = jest.fn((x: number) => x + 1);
     const f2 = jest.fn((x) => x * 2);

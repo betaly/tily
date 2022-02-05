@@ -2,7 +2,7 @@ import clone from '../clone';
 
 const {createElement, memo} = require('react');
 
-describe('utils/clone', () => {
+describe('clone', () => {
   it('should return copy of all nested objects', () => {
     const arr = [1, 2, {b: 8}];
     const date = new Date();

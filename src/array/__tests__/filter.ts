@@ -1,6 +1,6 @@
 import filter from '../filter';
 
-describe('utils/array/filter', () => {
+describe('array/filter', () => {
   it('should filter arrays', () => {
     expect(filter(() => true, [])).toEqual([]);
     expect(filter((x) => x > 2, [1, 2, 3, 4, 5])).toEqual([3, 4, 5]);

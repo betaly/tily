@@ -1,6 +1,6 @@
 import isFinite from '../finite';
 
-describe('utils/is/finite', () => {
+describe('is/finite', () => {
   it('check is finite', () => {
     expect(isFinite(0)).toBe(true);
     expect(isFinite(21424.2424)).toBe(true);

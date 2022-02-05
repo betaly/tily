@@ -1,6 +1,6 @@
 import isEmpty from '../empty';
 
-describe('utils/is/empty', () => {
+describe('is/empty', () => {
   it('test', () => {
     expect(isEmpty(undefined)).toBe(true);
     expect(isEmpty(null)).toBe(true);

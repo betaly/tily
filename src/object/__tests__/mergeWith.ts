@@ -1,6 +1,6 @@
 import mergeWith from '../mergeWith';
 
-describe('utils/object/mergeWith', () => {
+describe('object/mergeWith', () => {
   it('should merge calling function when names are identical', () => {
     const f = jest.fn((x, y) => x + y);
     const a = {a: 1, b: 2};

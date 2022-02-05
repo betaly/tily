@@ -1,7 +1,7 @@
 import when from '../when';
 import identity from '../identity';
 
-describe('utils/function/when', () => {
+describe('function/when', () => {
   it('should call onTrue if pred is truthy', () => {
     const p = jest.fn(identity);
     const f = jest.fn(identity);

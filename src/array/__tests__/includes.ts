@@ -1,6 +1,6 @@
 import includes from '../includes';
 
-describe('utils/array/includes', () => {
+describe('array/includes', () => {
   it('test includes for array', () => {
     expect(includes(1, [2, 1, 3])).toBe(true);
     expect(includes(5, [2, 1, 3])).toBe(false);

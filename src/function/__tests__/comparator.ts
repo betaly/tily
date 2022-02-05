@@ -1,6 +1,6 @@
 import comparator from '../comparator';
 
-describe('utils/function/comparator', () => {
+describe('function/comparator', () => {
   type Age = {age: number};
   const byAge = comparator((a: Age, b: Age) => a.age < b.age);
   const person1 = {

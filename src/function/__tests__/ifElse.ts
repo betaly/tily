@@ -1,6 +1,6 @@
 import ifElse from '../ifElse';
 
-describe('utils/function/ifElse', () => {
+describe('function/ifElse', () => {
   it('should call first function base on condition', () => {
     const cond = jest.fn(() => true);
     const onT = jest.fn(() => 8);

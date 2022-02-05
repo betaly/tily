@@ -1,6 +1,6 @@
 import defaults from '../defaults';
 
-describe('utils/object/defaults', () => {
+describe('object/defaults', () => {
   it('should return assigned object', () => {
     const a = {a: 1, b: 2};
     const b: any = {c: 3};

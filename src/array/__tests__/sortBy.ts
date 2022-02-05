@@ -1,6 +1,6 @@
 import sortBy from '../sortBy';
 
-describe('utils/array/sortBy', () => {
+describe('array/sortBy', () => {
   it('should return new sorted array', () => {
     const fn = jest.fn((x) => -x);
     const arr = [4, 5, 6, 2, 2, 3, 4, 1];

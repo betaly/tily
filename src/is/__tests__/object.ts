@@ -1,6 +1,6 @@
 import isObject from '../object';
 
-describe('utils/is/object', () => {
+describe('is/object', () => {
   it('test', () => {
     expect(isObject({a: 5})).toBe(true);
     expect(isObject({})).toBe(true);

@@ -1,6 +1,6 @@
 import findKey from '../findKey';
 
-describe('utils/object/findKey', () => {
+describe('object/findKey', () => {
   it('test', () => {
     expect(findKey((x) => x > 3, null)).toBeUndefined();
     expect(findKey((x) => x > 3, {})).toBeUndefined();

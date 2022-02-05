@@ -1,6 +1,6 @@
 import isEqual from '../equal';
 
-describe('utils/is/equal', () => {
+describe('is/equal', () => {
   it('equal primitives', () => {
     expect(isEqual(1, 2)).toBe(false);
     expect(isEqual(1, 1)).toBe(true);

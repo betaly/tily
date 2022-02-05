@@ -1,6 +1,6 @@
 import propOr from '../propOr';
 
-describe('utils/object/propOr', () => {
+describe('object/propOr', () => {
   it('should return prop', () => {
     const f = propOr('a', 'wrong');
 

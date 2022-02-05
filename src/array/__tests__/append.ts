@@ -1,6 +1,6 @@
 import append from '../append';
 
-describe('utils/array/append', () => {
+describe('array/append', () => {
   it('should add element to head', () => {
     expect(append('tests', ['write', 'more'])).toEqual(['write', 'more', 'tests']);
     expect(append('tests', [])).toEqual(['tests']);

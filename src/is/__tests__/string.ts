@@ -1,6 +1,6 @@
 import isString from '../string';
 
-describe('utils/is/string', () => {
+describe('is/string', () => {
   it('test', () => {
     expect(isString('test')).toBe(true);
     expect(isString(new String('test'))).toBe(true); // eslint-disable-line no-new-wrappers

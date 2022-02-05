@@ -1,6 +1,6 @@
 import eqProps from '../eqProps';
 
-describe('utils/object/eqProps', () => {
+describe('object/eqProps', () => {
   const o1 = {a: 1, b: 2, c: 4, d: 4};
   const o2 = {a: 1, b: 20, c: 4, d: 40};
 

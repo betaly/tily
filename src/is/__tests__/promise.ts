@@ -1,7 +1,7 @@
 import noop from '../../function/noop';
 import isPromise from '../promise';
 
-describe('utils/is/promise', () => {
+describe('is/promise', () => {
   it('test', () => {
     expect(isPromise(undefined)).toBe(false);
     expect(isPromise(null)).toBe(false);

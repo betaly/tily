@@ -1,6 +1,6 @@
 import toString from '../toString';
 
-describe('utils/string/toString', () => {
+describe('string/toString', () => {
   it('test', () => {
     expect(toString(null)).toBe('');
     expect(toString(5)).toBe('5');

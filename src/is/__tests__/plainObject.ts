@@ -2,7 +2,7 @@ import isPlainObject from '../plainObject';
 
 const {createElement, memo} = require('react');
 
-describe('utils/is/plainObject', () => {
+describe('is/plainObject', () => {
   it('test', () => {
     expect(isPlainObject({a: 5})).toBe(true);
     expect(isPlainObject({})).toBe(true);

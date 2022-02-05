@@ -1,6 +1,6 @@
 import range from '../range';
 
-describe('utils/array/range', () => {
+describe('array/range', () => {
   it('should return array', () => {
     expect(range(4)).toEqual([0, 1, 2, 3]);
     expect(range(1, 4)).toEqual([1, 2, 3]);

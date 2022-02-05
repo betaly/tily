@@ -1,6 +1,6 @@
 import each from '../each';
 
-describe('utils/array/each', () => {
+describe('array/each', () => {
   it('should traverse all elements', () => {
     const f = jest.fn();
     const arr = [1, 2, 3];

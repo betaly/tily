@@ -1,6 +1,6 @@
 import snakeCaseName from '../snakeCaseName';
 
-describe('utils/string/snakeCaseName', () => {
+describe('string/snakeCaseName', () => {
   it.each([
     ['', ''],
     ['abc', 'abc'],

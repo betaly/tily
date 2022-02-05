@@ -1,6 +1,6 @@
 import isNumber from '../number';
 
-describe('utils/is/number', () => {
+describe('is/number', () => {
   it('check is number', () => {
     expect(isNumber(0)).toBe(true);
     expect(isNumber(21424.2424)).toBe(true);
