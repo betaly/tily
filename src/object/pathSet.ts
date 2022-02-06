@@ -38,7 +38,7 @@ interface PathSet {
  * @return {Object}
  * @example
  *
- *      pathSet(['a', 'b'], 3, {}) // => { a: { b: 3 } }
+ *      pathSet(['a', 'b'], 3, {}) //=> { a: { b: 3 } }
  */
 export const pathSet = curryN(3, (paths: Paths = [], value, obj = {}) => {
   const n = paths.length - 1;

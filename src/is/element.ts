@@ -8,9 +8,9 @@ import isPlainObject from './plainObject';
  * @returns {boolean} Returns `true` if `value` is a DOM element, else `false`.
  * @example
  *
- * isElement(document.body); // => true
+ *      isElement(document.body); //=> true
  *
- * isElement('<body>'); // => false
+ *      isElement('<body>');      //=> false
  */
 export const isElement = (test): test is HTMLElement => isObject(test) && test.nodeType === 1 && !isPlainObject(test);
 

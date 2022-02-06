@@ -7,7 +7,7 @@ import objectKeys from './keys';
  * @returns {number} Returns the collection size.
  * @example
  *
- * size({ 'a': 1, 'b': 2 }); // => 2
+ * size({ 'a': 1, 'b': 2 }); //=> 2
  *
  */
 export const size = (obj) => objectKeys(obj).length;

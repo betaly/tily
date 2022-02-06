@@ -23,7 +23,7 @@ interface GroupBy {
  * @returns {Object} Returns the composed aggregate object.
  * @example
  *
- * groupBy(x => x, { a: 1, b: 1, c: 3});// => { '1': [1, 1], '3': [3] }
+ * groupBy(x => x, { a: 1, b: 1, c: 3});//=> { '1': [1, 1], '3': [3] }
  */
 export const groupBy = curryN(2, <O extends Record<any, any>>(fn: ObjBaseBy<O, string>, obj: O = {} as any) => {
   const result = {};

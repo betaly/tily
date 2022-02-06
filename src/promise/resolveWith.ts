@@ -21,7 +21,7 @@ interface ResolveWith {
  * @param {*[]} payload
  * @returns {Promise}
  * @example
- *      rejectWith(toLowerCase, 'OK').then( res => console.info(res) );// => 'ok'
+ *      rejectWith(toLowerCase, 'OK').then( res => console.info(res) );//=> 'ok'
  */
 export const resolveWith = curryN(2, <R>(func: Func<R>, ...payload) => {
   return Promise.resolve(func(...payload));

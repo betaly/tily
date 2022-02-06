@@ -22,8 +22,8 @@ interface AnyPass {
  *      var isBlackCard = anyPass([isClub, isSpade]);
  *
  *      isBlackCard({rank: '10', suit: '♣'}); //=> true
- *      isBlackCard({rank: 'Q', suit: '♠'}); //=> true
- *      isBlackCard({rank: 'Q', suit: '♦'}); //=> false
+ *      isBlackCard({rank: 'Q', suit: '♠'});  //=> true
+ *      isBlackCard({rank: 'Q', suit: '♦'});  //=> false
  */
 export const anyPass = curryN(2, <T>(fns: ArrayLike<Pred<T>>, ...args: T[]) => {
   for (let i = 0; i < fns.length; i++) {

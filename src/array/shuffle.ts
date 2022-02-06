@@ -5,7 +5,7 @@
  * @returns {Array} Returns the new shuffled array.
  * @example
  *
- * shuffle([1, 2, 3, 4]); // => [4, 1, 3, 2]
+ *      shuffle([1, 2, 3, 4]); //=> [4, 1, 3, 2]
  */
 export const shuffle = <T>(arr: ArrayLike<T> = []) => {
   const len = arr.length;

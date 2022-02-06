@@ -5,10 +5,10 @@
  * @returns {boolean} Returns `true` if `test` is nil, else `false`.
  * @example
  *
- * isNil(undefined); // => true
- * isNil(null); // => true
- * isNil(''); // => false
- * isNil(5); // => false
+ *    isNil(undefined); //=> true
+ *    isNil(null);      //=> true
+ *    isNil('');        //=> false
+ *    isNil(5);         //=> false
  */
 export const isNil = (test): test is void => test == null;
 

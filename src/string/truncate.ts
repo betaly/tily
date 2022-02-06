@@ -1,8 +1,15 @@
+import curryN from '../function/curryN';
+
+export interface Truncate {
+  (maxLength: number, value: string, suffix?: string): string;
+  (maxLength: number): (value: string, suffix?: string) => string;
+}
+
 /**
  * Truncate a string to `maxLength` and append a suffix.
  *
- * @param value
  * @param maxLength
+ * @param value
  * @param suffix
  *
  * @example
@@ -11,10 +18,8 @@
  *      truncate('hello world', 5);    //=> 'hello…'
  *      truncate('你好，世界', 2);       //=> '你好…'
  */
-export function truncate(value: string, maxLength: number, suffix = '…'): string {
-  if (value.length <= maxLength) {
-    return value;
-  }
+export const truncate = curryN(2, (maxLength: number, value: string, suffix = '…') => {
+  return value.length <= maxLength ? value : (value.slice(0, maxLength) + suffix);
+}) as Truncate;
 
-  return `${value.substring(0, maxLength)}${suffix}`;
-}
+export default truncate;

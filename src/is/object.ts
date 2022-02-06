@@ -5,8 +5,8 @@
  * @returns {boolean} Returns `true` if `test` is object, else `false`.
  * @example
  *
- * isObject({ a: 'test' }); // => true
- * isObject(null); // => false
+ *      isObject({ a: 'test' });  //=> true
+ *      isObject(null);           //=> false
  */
 export const isObject = (test): test is Record<any, any> => test !== null && typeof test === 'object';
 

@@ -10,9 +10,9 @@ const hasOwnProperty = Object.prototype.hasOwnProperty;
  * @return {Boolean}
  * @example
  *
- *      isShallowEqual(1, 1); //=> true
- *      isShallowEqual(1, '1'); //=> false
- *      isShallowEqual([1, 2, 3], [1, 2, 3]); //=> true
+ *      isShallowEqual(1, 1);                           //=> true
+ *      isShallowEqual(1, '1');                         //=> false
+ *      isShallowEqual([1, 2, 3], [1, 2, 3]);           //=> true
  *      isShallowEqual({ a: { b: 1 }}, { a: { b: 1 }}); //=> false
  */
 export const isShallowEqual = (test1, test2): boolean => {

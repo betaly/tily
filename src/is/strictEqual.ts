@@ -6,11 +6,11 @@
  * @return {Boolean}
  * @example
  *
- *      isStrictEqual(1, 1); //=> true
- *      isStrictEqual(1, '1'); //=> false
- *      isStrictEqual({}, {}); //=> false
- *      isStrictEqual(NaN, NaN); //=> true
- *      isStrictEqual(-0, 0); //=> true
+ *      isStrictEqual(1, 1);        //=> true
+ *      isStrictEqual(1, '1');      //=> false
+ *      isStrictEqual({}, {});      //=> false
+ *      isStrictEqual(NaN, NaN);    //=> true
+ *      isStrictEqual(-0, 0);       //=> true
  */
 export const isStrictEqual = (test1, test2): boolean => {
   // SameValue algorithm

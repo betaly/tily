@@ -19,7 +19,7 @@ interface Partition {
  * @example
  *
  *      partition(includes('s'), ['sss', 'ttt', 'foo', 'bars']);
- *      // => [ [ 'sss', 'bars' ],  [ 'ttt', 'foo' ] ]
+ *      //=> [ [ 'sss', 'bars' ],  [ 'ttt', 'foo' ] ]
  */
 export const partition = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
   const t = [];

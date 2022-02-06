@@ -19,7 +19,7 @@ interface GroupBy {
  * @returns {Array} Returns the composed array.
  * @example
  *
- * groupBy([isPositive, isZero, isNegative], [0, -3, 2, 'str', 4, -1]);// => [[2,4], [0], [-3, -1], ['str']]
+ * groupBy([isPositive, isZero, isNegative], [0, -3, 2, 'str', 4, -1]);//=> [[2,4], [0], [-3, -1], ['str']]
  */
 export const groupBy = curryN(2, <T>(fns: ArrPred<T>[], arr: ArrayLike<T> = []) => {
   const n = fns.length;

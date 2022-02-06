@@ -6,8 +6,8 @@
  * @returns {string} Returns the converted string.
  * @example
  *
- *    toString(null); // => ''
- *    toString('test'); // => 'test'
+ *    toString(null); //=> ''
+ *    toString('test'); //=> 'test'
  *    toString([1, 2, 3]); => '1,2,3'
  */
 export const toString = (val) => {

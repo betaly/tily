@@ -9,9 +9,9 @@ import has from '../object/has';
  * @returns {boolean}
  * @example
  *
- * isArrayLike([]); // => true
- * isArrayLike({ 0:'a', 1: 'b', length: 2 }); // => true
- * isArrayLike(null); // => false
+ *      isArrayLike([]);                            //=> true
+ *      isArrayLike({ 0:'a', 1: 'b', length: 2 });  //=> true
+ *      isArrayLike(null);                          //=> false
  */
 export const isArrayLike = (test): test is ArrayLike<any> => {
   switch (true) {

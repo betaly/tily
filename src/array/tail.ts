@@ -13,8 +13,8 @@ interface Tail {
  * @return {*}
  * @example
  *
- *      tail(['fi', 'fo', 'fum']); //=> ['fo', 'fum']
- *      tail([]); //=> []
+ *      tail(['fi', 'fo', 'fum']);  //=> ['fo', 'fum']
+ *      tail([]);                   //=> []
  */
 export const tail = (<T>(arr: ArrayLike<T>) => slice(1, arr.length, arr)) as Tail;
 

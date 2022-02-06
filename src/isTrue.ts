@@ -14,10 +14,10 @@ interface IsTrue {
  *
  * @example
  *
- *      isTrue(true) // => true
- *      isTrue('true') // => true
- *      isTrue([true]) // => false
- *      isTrue('false') // => false
+ *      isTrue(true)      //=> true
+ *      isTrue('true')    //=> true
+ *      isTrue([true])    //=> false
+ *      isTrue('false')   //=> false
  */
 export const isTrue = ((val: any) => val === true || val === 'true') as IsTrue;
 export default isTrue;

@@ -1,9 +1,9 @@
 import curryN from '../function/curryN';
 
 interface StartsWith {
-  (a: string, str: string): boolean;
+  (prefix: string, str: string): boolean;
 
-  (a: string): (str: string) => boolean;
+  (prefix: string): (str: string) => boolean;
 }
 
 /**
@@ -14,8 +14,8 @@ interface StartsWith {
  * @return {Boolean}
  * @example
  *
- *      startsWith('a', 'abc')                //=> true
- *      startsWith('b', 'abc')                //=> false
+ *      startsWith('a', 'abc');                //=> true
+ *      startsWith('b', 'abc');                //=> false
  */
 export const startsWith = curryN(
   2,

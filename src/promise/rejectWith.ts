@@ -21,7 +21,7 @@ interface RejectWith {
  * @param {*[]} payload
  * @returns {Promise}
  * @example
- *      rejectWith(toLowerCase, 'Error').catch( err => console.error(err) );// => 'error'
+ *      rejectWith(toLowerCase, 'Error').catch( err => console.error(err) );//=> 'error'
  */
 export const rejectWith = curryN(2, <R>(func: Func<R>, ...payload) => {
   return Promise.reject(func(...payload));

@@ -7,8 +7,8 @@ import {Func} from '../typings/types';
  * @returns {boolean} Returns `true` if `test` is function, else `false`.
  * @example
  *
- * isFunction(() => {}); // => true
- * isFunction(null); // => false
+ *      isFunction(() => {}); //=> true
+ *      isFunction(null);     //=> false
  */
 export const isFunction = (test): test is Func => typeof test === 'function';
 

@@ -19,7 +19,7 @@ interface SplitEvery {
  * @param {Array|String} arr a collection to split
  * @return {Array[]|String[]}
  * @example
- *      splitEvery(2, [1, 2, 3, 4, 5]); // => [[1, 2], [3, 4], [5]]
+ *      splitEvery(2, [1, 2, 3, 4, 5]); //=> [[1, 2], [3, 4], [5]]
  */
 export const splitEvery = curryN(2, <T>(length: number, arr: ArrayLike<T> = []) => {
   const result: T[][] = [];

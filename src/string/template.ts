@@ -14,7 +14,7 @@ interface Template {
  * @return {String} String with replaced keywords
  * @example
  *
- *      template({ fruit: 'banana' }, 'Petya has a %{fruit}') // => Petya has a banana
+ *      template({ fruit: 'banana' }, 'Petya has a %{fruit}') //=> Petya has a banana
  */
 export const template = curryN(2, (replacements = {}, str: string = '') =>
   str.replace(/[%$]\{.+?\}/g, (match) => {

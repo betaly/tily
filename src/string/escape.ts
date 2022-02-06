@@ -17,7 +17,7 @@ const replace = (char) => htmlEscapes[char];
  * @returns {string} Returns the escaped string.
  * @example
  *
- *      escape('fred, barney, & pebbles'); // => 'fred, barney, &amp; pebbles'
+ *      escape('fred, barney, & pebbles'); //=> 'fred, barney, &amp; pebbles'
  */
 export const escape = (str = '') => str.replace(escapeRegExp, replace);
 

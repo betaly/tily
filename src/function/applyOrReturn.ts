@@ -20,8 +20,8 @@ interface ApplyOrReturn {
  * @return {*}
  * @example
  *
- *      applyOrReturn([1,2,3], (...args) => args) // => [1,2,3]
- *      applyOrReturn([1,2,3], 'test') // => 'test'
+ *      applyOrReturn([1,2,3], (...args) => args) //=> [1,2,3]
+ *      applyOrReturn([1,2,3], 'test') //=> 'test'
  */
 export const applyOrReturn = curryN(2, <T>(args: T[], test: ApplyFunc<T>) => {
   if (typeof test === 'function') {

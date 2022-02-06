@@ -160,6 +160,6 @@ export function composeP(...chain: ((...args) => Promise<any>)[]) {
         composeP(...chain.slice(4)),
       );
   }
-};
+}
 
 export default composeP;

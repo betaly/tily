@@ -18,9 +18,9 @@ interface Includes {
  * @return {Boolean} `true` if the item is in the list, `false` otherwise.
  * @example
  *
- *      includes(3, [1, 2, 3]); //=> true
- *      includes(4, [1, 2, 3]); //=> false
- *      includes('test', 'aaatest'); //=> true
+ *      includes(3, [1, 2, 3]);       //=> true
+ *      includes(4, [1, 2, 3]);       //=> false
+ *      includes('test', 'aaatest');  //=> true
  */
 export const includes = curryN(2, <T>(value: T, arr: ArrayLike<T> = []) => indexOf(value, arr) !== -1) as Includes;
 

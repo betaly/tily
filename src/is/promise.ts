@@ -8,8 +8,8 @@ import isFunction from './function';
  * @returns {boolean} Returns `true` if `test` is Promise, else `false`.
  * @example
  *
- *      isPromise({}) // => false
- *      isPromise(Promise.resolve()) // => true
+ *      isPromise({});                 //=> false
+ *      isPromise(Promise.resolve());  //=> true
  */
 export const isPromise = (test): test is Promise<any> => (isObject(test) || isFunction(test)) && isFunction(test.then);
 

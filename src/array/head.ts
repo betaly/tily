@@ -11,8 +11,8 @@ interface Head {
  * @return {*}
  * @example
  *
- *      head(['fi', 'fo', 'fum']); //=> 'fi'
- *      head([]); //=> undefined
+ *      head(['fi', 'fo', 'fum']);  //=> 'fi'
+ *      head([]);                   //=> undefined
  */
 export const head = (<T>(arr: ArrayLike<T> | string) => arr && arr[0]) as Head;
 

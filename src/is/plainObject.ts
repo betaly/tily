@@ -15,11 +15,11 @@ import isObject from './object';
  * @returns {boolean} Returns `true` if `test` is a plain object, else `false`.
  * @example
  *
- * isPlainObject({ a: 'test' }); // => true
+ *      isPlainObject({ a: 'test' });   //=> true
  *
- * isPlainObject(moment()); // => false
+ *      isPlainObject(moment());        //=> false
  *
- * isPlainObject(<span></span>); // => false
+ *      isPlainObject(<span></span>);   //=> false
  */
 export const isPlainObject = function isPlainObject(test): test is Record<any, any> {
   if (!isObject(test)) {

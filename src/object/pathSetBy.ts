@@ -38,7 +38,7 @@ interface PathSetBy {
  * @return {Object}
  * @example
  *
- *      pathSetBy(['a', 'b'], x => x+1, {a: { b:1 }}) // => { a: { b: 2 } }
+ *      pathSetBy(['a', 'b'], x => x+1, {a: { b:1 }}) //=> { a: { b: 2 } }
  */
 export const pathSetBy = curryN(3, (paths: Paths = [], fn: ObjBase<Paths, any, any>, obj = {}) => {
   const n = paths.length - 1;

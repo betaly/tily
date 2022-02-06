@@ -17,7 +17,7 @@ interface MaxBy {
  *
  *      var objects = [{ 'n': 1 }, { 'n': 2 }];
  *
- *      maxBy(o => o.n, objects); // => { 'n': 2 }
+ *      maxBy(o => o.n, objects); //=> { 'n': 2 }
  *
  */
 export const maxBy = curryN(2, <T, R extends Ord>(fn: ArrOrdFunc<T, R>, arr: ArrayLike<T> = []) => {

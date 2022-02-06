@@ -10,13 +10,13 @@ import isObject from './object';
  * @returns {boolean} Returns `true` if `test` is empty, else `false`.
  * @example
  *
- * isEmpty([]); // => true
- * isEmpty(null); // => true
- * isEmpty({}); // => true
- * isEmpty(''); // => true
- * isEmpty('test'); // => false
- * isEmpty({ a: 5 }); // => false
- * isEmpty([1]); // => false
+ *      isEmpty([]);        //=> true
+ *      isEmpty(null);      //=> true
+ *      isEmpty({});        //=> true
+ *      isEmpty('');        //=> true
+ *      isEmpty('test');    //=> false
+ *      isEmpty({ a: 5 });  //=> false
+ *      isEmpty([1]);       //=> false
  */
 export const isEmpty = (test): boolean => {
   switch (true) {

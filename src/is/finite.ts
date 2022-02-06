@@ -7,8 +7,8 @@ import isNumber from './number';
  * @returns {boolean} Returns `true` if `test` is finite, else `false`.
  * @example
  *
- * isFinite(5); // => true
- * isFinite(null); // => false
+ *      isFinite(5);    //=> true
+ *      isFinite(null); //=> false
  */
 export const isFinite = (test): test is number => isNumber(test) && global.isFinite(test);
 

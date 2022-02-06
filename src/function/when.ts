@@ -25,9 +25,9 @@ interface When {
  * @example
  *
  *      // truncate :: String -> String
- *      var truncate = R.when(
+ *      var truncate = when(
  *        x => x.length > 10,
- *        x => x.slice(0, 10) + '...'
+ *        x => x.slice(0, 10) + '…'
  *      );
  *      truncate('12345');         //=> '12345'
  *      truncate('0123456789ABC'); //=> '0123456789…'

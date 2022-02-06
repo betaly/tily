@@ -10,7 +10,7 @@ interface Uniq {
  *
  * @example
  *
- *  unique([1,2,1,2,3,4,1,2]) // => [1, 2, 3, 4]
+ *  unique([1,2,1,2,3,4,1,2]) //=> [1, 2, 3, 4]
  */
 export const uniq = (<T>(arr: ArrayLike<T> = []) => {
   const result: T[] = [];

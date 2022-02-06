@@ -21,8 +21,8 @@ export interface Assign {
  * @param sources
  * @example
  *
- * assign({a:1}, {b:2}) // => {a:1, b:2}
- * assign([1,2,3], [4,5]) // => [4,5,3]
+ * assign({a:1}, {b:2}) //=> {a:1, b:2}
+ * assign([1,2,3], [4,5]) //=> [4,5,3]
  */
 export const assign = ((...sources) => {
   if (isArray(sources[0])) {
