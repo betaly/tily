@@ -2,7 +2,7 @@
 
 > Fast, small and purely functional utility library
 
-`Tily` is forked from [Tinkoff Utils](https://github.com/TinkoffCreditSystems/utils.js)
+`Tily` is forked from [Tinkoff Utils](https://github.com/Tinkoff/utils.js)
 
 ## Install
 ```
