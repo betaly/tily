@@ -1,7 +1,7 @@
 import assert from 'assert';
 import {format} from '../format';
 
-describe('string/format', function() {
+describe('string/format', function () {
   test('format', () => {
     assert.strictEqual(format('Foo Bar'), 'Foo Bar');
     assert.strictEqual(format('Foo {0} Bar'), 'Foo {0} Bar');

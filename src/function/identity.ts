@@ -15,6 +15,6 @@ interface Identity {
  *      const obj = {};
  *      identity(obj) === obj; //=> true
  */
-export const identity = ((x) => x) as Identity;
+export const identity = (x => x) as Identity;
 
 export default identity;

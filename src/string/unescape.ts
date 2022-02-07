@@ -5,9 +5,9 @@ const htmlUnescapes = {
   '&lt;': '<',
   '&gt;': '>',
   '&quot;': '"',
-  '&#39;': '\'',
+  '&#39;': "'",
 };
-const replace = (char) => htmlUnescapes[char];
+const replace = char => htmlUnescapes[char];
 
 /**
  * The inverse of `escape`; this method converts the HTML entities

@@ -5,20 +5,25 @@ import {ArrValues, ObjValues} from '../../typings/types';
 describe('object/groupBy', () => {
   it('group object values by function', () => {
     const obj = {a: {b: 1, c: 2}, b: {b: 3}, c: {b: 1, d: 5}};
-    const fn = jest.fn((x) => x.b);
+    const fn = jest.fn(x => x.b);
 
-    expect(groupBy((x) => x.b, obj)).toEqual({
-      1: [{b: 1, c: 2}, {b: 1, d: 5}],
+    expect(groupBy(x => x.b, obj)).toEqual({
+      1: [
+        {b: 1, c: 2},
+        {b: 1, d: 5},
+      ],
       3: [{b: 3}],
     });
   });
 
-
   it('group array values by function', () => {
     const arr = [{b: 1, c: 2}, {b: 3}, {b: 1, d: 5}];
 
-    expect(groupBy((x) => x.b, arr)).toEqual({
-      1: [{b: 1, c: 2}, {b: 1, d: 5}],
+    expect(groupBy(x => x.b, arr)).toEqual({
+      1: [
+        {b: 1, c: 2},
+        {b: 1, d: 5},
+      ],
       3: [{b: 3}],
     });
   });
@@ -27,7 +32,10 @@ describe('object/groupBy', () => {
     const obj = {a: {b: 1, c: 2}, b: {b: 3}, c: {b: 1, d: 5}};
 
     expect(groupBy((x: ObjValues<typeof obj>) => x.b)(obj)).toEqual({
-      1: [{b: 1, c: 2}, {b: 1, d: 5}],
+      1: [
+        {b: 1, c: 2},
+        {b: 1, d: 5},
+      ],
       3: [{b: 3}],
     });
   });
@@ -36,18 +44,21 @@ describe('object/groupBy', () => {
     const arr = [{b: 1, c: 2}, {b: 3}, {b: 1, d: 5}];
 
     expect(groupBy((x: ArrValues<typeof arr>) => x.b)(arr)).toEqual({
-      1: [{b: 1, c: 2}, {b: 1, d: 5}],
+      1: [
+        {b: 1, c: 2},
+        {b: 1, d: 5},
+      ],
       3: [{b: 3}],
     });
   });
 
   it('check grouped object type', () => {
     const obj = {a: {b: 1, c: 2}, b: {b: 3}, c: {b: 1, d: 5}};
-    const result = groupBy((x) => x.b, obj);
-    const curriedResult = groupBy((x) => x.b)(obj);
+    const result = groupBy(x => x.b, obj);
+    const curriedResult = groupBy(x => x.b)(obj);
     const typedCurriedResult = groupBy((x: ObjValues<typeof obj>) => x.b)(obj);
 
-    type ValuesType = {b: number, c: number} | {b: number} | {b: number, d: number};
+    type ValuesType = {b: number; c: number} | {b: number} | {b: number; d: number};
 
     type ExpectedType = Record<number, Array<ValuesType>>;
     type CurriedExpectedType = Record<any, Array<ValuesType>>;
@@ -60,11 +71,11 @@ describe('object/groupBy', () => {
 
   it('check grouped array type', () => {
     const arr = [{b: 1, c: 2}, {b: 3}, {b: 1, d: 5}];
-    const result = groupBy((x) => x.b, arr);
-    const curriedResult = groupBy((x) => x.b)(arr);
+    const result = groupBy(x => x.b, arr);
+    const curriedResult = groupBy(x => x.b)(arr);
     const typedCurriedResult = groupBy((x: ArrValues<typeof arr>) => x.b)(arr);
 
-    type ValuesType = {b: number, c: number} | {b: number} | {b: number, d: number};
+    type ValuesType = {b: number; c: number} | {b: number} | {b: number; d: number};
 
     type ExpectedType = Record<number, Array<ValuesType>>;
     type CurriedExpectedType = Record<any, Array<ValuesType>>;
@@ -77,9 +88,9 @@ describe('object/groupBy', () => {
 
   it('check grouped const object type', () => {
     const obj = {a: {b: 1, c: 2}, b: {b: 3}, c: {b: 1, d: 5}} as const;
-    const result = groupBy((x) => x.b, obj);
+    const result = groupBy(x => x.b, obj);
 
-    type ValuesType = {b: number, c: number} | {b: number} | {b: number, d: number};
+    type ValuesType = {b: number; c: number} | {b: number} | {b: number; d: number};
 
     type ExpectedType = {
       [1]: Array<ValuesType>;
@@ -91,9 +102,9 @@ describe('object/groupBy', () => {
 
   it('check grouped const array type', () => {
     const arr = [{b: 1, c: 2}, {b: 3}, {b: 1, d: 5}] as const;
-    const result = groupBy((x) => x.b, arr);
+    const result = groupBy(x => x.b, arr);
 
-    type ValuesType = {b: number, c: number} | {b: number} | {b: number, d: number};
+    type ValuesType = {b: number; c: number} | {b: number} | {b: number; d: number};
 
     type ExpectedType = {
       [1]: ReadonlyArray<ValuesType>;

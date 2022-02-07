@@ -4,7 +4,7 @@ describe('function/throttle', () => {
   it('should call function at most once at "wait" ms period', () => {
     // eslint-disable-line max-statements
     let context;
-    const f = jest.fn(function() {
+    const f = jest.fn(function () {
       context = this;
     });
     const throttled = throttle(1000, f);

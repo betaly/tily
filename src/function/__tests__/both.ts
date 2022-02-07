@@ -1,8 +1,8 @@
 import both from '../both';
 
 describe('function/both', () => {
-  const t = jest.fn((x) => true);
-  const f = jest.fn((x) => false);
+  const t = jest.fn(x => true);
+  const f = jest.fn(x => false);
 
   beforeEach(() => {
     f.mockClear();

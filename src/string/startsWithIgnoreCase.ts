@@ -19,9 +19,8 @@ interface StartsWithIgnoreCase {
  *      startsWithIgnoreCase('ab', 'ABC');               //=> true
  *      startsWithIgnoreCase('b', 'abc');                //=> false
  */
-export const startsWithIgnoreCase = curryN(
-  2,
-  (prefix: string = '', str: string = '') => _startsWithIgnoreCase(str, prefix),
+export const startsWithIgnoreCase = curryN(2, (prefix: string = '', str: string = '') =>
+  _startsWithIgnoreCase(str, prefix),
 ) as StartsWithIgnoreCase;
 
 function _startsWithIgnoreCase(str: string, prefix: string): boolean {

@@ -7,8 +7,7 @@ describe('object/propOr', () => {
     expect(f({a: 1})).toBe(1);
     expect(f({a: 2, b: 3})).toBe(2);
 
-    function A() {
-    }
+    function A() {}
 
     A.prototype.a = 'test123';
     expect(f(new A())).toBe('test123');

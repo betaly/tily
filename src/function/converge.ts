@@ -41,12 +41,14 @@ export interface Converge {
  * @symb converge(f, [g, h])(a, b) = f(g(a, b), h(a, b))
  */
 
-
 export const converge = curryN(2, function converge(after: ConvergeAfterFn, fns: ConvergeArgFn[]) {
   // @ts-ignore
   const maxNumArgs = reduce((a, b) => Math.max(a, b), 0, pluck('length', fns));
-  return curryN(maxNumArgs, function(...args) {
-    return after.apply(this, map(fn => fn.apply(this, args), fns));
+  return curryN(maxNumArgs, function (...args) {
+    return after.apply(
+      this,
+      map(fn => fn.apply(this, args), fns),
+    );
   });
 }) as Converge;
 

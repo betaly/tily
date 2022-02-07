@@ -26,11 +26,6 @@ interface Reverse {
  */
 
 export const reverse = (<T>(list: ArrayLike<T> | string) =>
-  isString(list)
-    ? list
-      .split('')
-      .reverse()
-      .join('')
-    : Array.prototype.slice.call(list, 0).reverse()) as Reverse;
+  isString(list) ? list.split('').reverse().join('') : Array.prototype.slice.call(list, 0).reverse()) as Reverse;
 
 export default reverse;

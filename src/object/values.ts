@@ -15,7 +15,7 @@ interface Values {
  *
  *      values({a: 1, b: 2, c: 3}); //=> [1, 2, 3]
  */
-export const values = ((obj) => {
+export const values = (obj => {
   const keys = objectKeys(obj);
   const len = keys.length;
   const values = new Array(len);

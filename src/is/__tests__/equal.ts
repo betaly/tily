@@ -24,21 +24,31 @@ describe('is/equal', () => {
     expect(isEqual(new Date(), new Date(123))).toBe(false);
     expect(isEqual(/123/, /123/)).toBe(true);
     expect(isEqual(/123/, /1234/)).toBe(false);
-    expect(isEqual(() => 3, () => 3)).toBe(false);
-    expect(isEqual(() => 3, () => 4)).toBe(false);
+    expect(
+      isEqual(
+        () => 3,
+        () => 3,
+      ),
+    ).toBe(false);
+    expect(
+      isEqual(
+        () => 3,
+        () => 4,
+      ),
+    ).toBe(false);
   });
 
   it('equal objects', () => {
     const obj = {
-      f: () => {}
+      f: () => {},
     };
     const obj2 = {
-      f: () => {}
-    }
+      f: () => {},
+    };
     expect(isEqual({}, {})).toBe(true);
     expect(isEqual(obj, obj)).toBe(true);
     expect(isEqual(obj, obj2)).toBe(false);
-    expect(isEqual({ f: () => {} }, { f: () => {} })).toBe(false);
+    expect(isEqual({f: () => {}}, {f: () => {}})).toBe(false);
     expect(isEqual({a: 1}, {a: 1})).toBe(true);
     expect(isEqual({a: 1}, {a: 2})).toBe(false);
     expect(isEqual({a: 1, b: [1, 2, {c: 3}]}, {a: 1, b: [1, 2, {c: 3}]})).toBe(true);
@@ -61,7 +71,17 @@ describe('is/equal', () => {
 
     expect(isEqual(f, f)).toBe(true);
     expect(isEqual(f, f2)).toBe(false);
-    expect(isEqual(() => {}, () => {})).toBe(false);
-    expect(isEqual(() => {}, function () {})).toBe(false);
+    expect(
+      isEqual(
+        () => {},
+        () => {},
+      ),
+    ).toBe(false);
+    expect(
+      isEqual(
+        () => {},
+        function () {},
+      ),
+    ).toBe(false);
   });
 });

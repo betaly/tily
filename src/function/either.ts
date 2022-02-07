@@ -26,6 +26,11 @@ interface Either {
  *      f(8); //=> true
  *      f(3); //=> false
  */
-export const either = curryN(2, <T>(f: Pred<T>, g: Pred<T>) => (...args) => f(...args) || g(...args)) as Either;
+export const either = curryN(
+  2,
+  <T>(f: Pred<T>, g: Pred<T>) =>
+    (...args) =>
+      f(...args) || g(...args),
+) as Either;
 
 export default either;

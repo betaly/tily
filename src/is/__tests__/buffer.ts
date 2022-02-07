@@ -16,8 +16,14 @@ describe('is/boolean', () => {
     expect(isBuffer('string')).toBe(false);
     expect(isBuffer({})).toBe(false);
     expect(isBuffer([])).toBe(false);
-    expect(isBuffer(function foo () {})).toBe(false);
-    expect(isBuffer({ isBuffer: null })).toBe(false);
-    expect(isBuffer({ isBuffer: function () { throw new Error() } })).toBe(false);
+    expect(isBuffer(function foo() {})).toBe(false);
+    expect(isBuffer({isBuffer: null})).toBe(false);
+    expect(
+      isBuffer({
+        isBuffer: function () {
+          throw new Error();
+        },
+      }),
+    ).toBe(false);
   });
 });

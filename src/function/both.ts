@@ -25,6 +25,11 @@ interface Both {
  *      f(100); //=> true
  *      f(101); //=> false
  */
-export const both = curryN(2, <T>(f: Pred<T>, g: Pred<T>) => (...args) => f(...args) && g(...args)) as Both;
+export const both = curryN(
+  2,
+  <T>(f: Pred<T>, g: Pred<T>) =>
+    (...args) =>
+      f(...args) && g(...args),
+) as Both;
 
 export default both;

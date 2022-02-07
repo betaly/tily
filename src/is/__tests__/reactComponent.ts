@@ -5,8 +5,7 @@ describe('is/reactComponent', () => {
 
   jest.mock('react-is', () => mockReactIs);
 
-  class Component extends PureComponent {
-  }
+  class Component extends PureComponent {}
 
   beforeEach(() => {
     jest.resetModules();

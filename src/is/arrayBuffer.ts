@@ -1,6 +1,6 @@
 import isFunction from './function';
 
-const { toString } = Object.prototype;
+const {toString} = Object.prototype;
 
 /**
  * Check if the given value is an ArrayBuffer.
@@ -10,6 +10,7 @@ const { toString } = Object.prototype;
  *      isArrayBuffer(new ArrayBuffer());   //=> true
  *      isArrayBuffer([]);                  //=> false
  */
-export const isArrayBuffer = (value: unknown): value is ArrayBuffer => isFunction(ArrayBuffer) && (value instanceof ArrayBuffer || toString.call(value) === '[object ArrayBuffer]');
+export const isArrayBuffer = (value: unknown): value is ArrayBuffer =>
+  isFunction(ArrayBuffer) && (value instanceof ArrayBuffer || toString.call(value) === '[object ArrayBuffer]');
 
 export default isArrayBuffer;

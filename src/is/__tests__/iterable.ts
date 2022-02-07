@@ -1,6 +1,6 @@
 import {isIterable} from '../iterable';
 
-describe('is/iterable', function() {
+describe('is/iterable', function () {
   test('isIterable', () => {
     expect(isIterable([])).toBe(true);
     expect(isIterable(new Set())).toBe(true);

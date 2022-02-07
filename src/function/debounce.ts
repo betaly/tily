@@ -22,24 +22,21 @@ export interface Debounce {
  * @param {Function} fn The function to debounce.
  * @returns {Function} Returns the new debounced function.
  */
-export const debounce = curryN(
-  2,
-  <F extends Func>(wait: number, fn: F): DebounceFunc<F> => {
-    let timeout;
+export const debounce = curryN(2, <F extends Func>(wait: number, fn: F): DebounceFunc<F> => {
+  let timeout;
 
-    function f() {
-      let args = arguments;
-      clearTimeout(timeout);
-      timeout = setTimeout(
-        () => fn.apply(this, args), // eslint-disable-line prefer-rest-params
-        wait,
-      );
-    }
+  function f() {
+    let args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(
+      () => fn.apply(this, args), // eslint-disable-line prefer-rest-params
+      wait,
+    );
+  }
 
-    f.cancel = () => clearTimeout(timeout);
+  f.cancel = () => clearTimeout(timeout);
 
-    return f;
-  },
-) as Debounce;
+  return f;
+}) as Debounce;
 
 export default debounce;

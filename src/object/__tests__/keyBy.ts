@@ -3,7 +3,7 @@ import keyBy from '../keyBy';
 describe('object/keyBy', () => {
   it('group object values by function', () => {
     const obj = {a: {b: 1, c: 2}, b: {b: 3}, c: {b: 1, d: 5}};
-    const fn = jest.fn((x) => x.b);
+    const fn = jest.fn(x => x.b);
 
     expect(keyBy(fn, obj)).toEqual({
       1: {b: 1, d: 5},

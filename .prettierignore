@@ -7,3 +7,4 @@ scripts
 *.yml
 CHANGELOG.md
 dist
+jest.config.js

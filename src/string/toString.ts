@@ -10,7 +10,7 @@
  *    toString('test'); //=> 'test'
  *    toString([1, 2, 3]); => '1,2,3'
  */
-export const toString = (val) => {
+export const toString = val => {
   if (val == null) {
     return '';
   }

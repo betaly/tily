@@ -7,10 +7,7 @@ interface ComposeP {
 
   <V0, T1, T2>(fn1: (x: T1) => Promise<T2>, fn0: (x0: V0) => Promise<T1>): (x0: V0) => Promise<T2>;
 
-  <V0, V1, T1, T2>(fn1: (x: T1) => Promise<T2>, fn0: (x0: V0, x1: V1) => Promise<T1>): (
-    x0: V0,
-    x1: V1,
-  ) => Promise<T2>;
+  <V0, V1, T1, T2>(fn1: (x: T1) => Promise<T2>, fn0: (x0: V0, x1: V1) => Promise<T1>): (x0: V0, x1: V1) => Promise<T2>;
 
   <V0, V1, V2, T1, T2>(fn1: (x: T1) => Promise<T2>, fn0: (x0: V0, x1: V1, x2: V2) => Promise<T1>): (
     x0: V0,
@@ -155,10 +152,7 @@ export function composeP(...chain: ((...args) => Promise<any>)[]) {
     case 4:
       return arity4(chain[0], chain[1], chain[2], chain[3]);
     default:
-      return composeP(
-        composeP(...chain.slice(0, 4)),
-        composeP(...chain.slice(4)),
-      );
+      return composeP(composeP(...chain.slice(0, 4)), composeP(...chain.slice(4)));
   }
 }
 

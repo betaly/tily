@@ -24,7 +24,7 @@ interface Filter {
  *      filter(n => n % 2 === 0, [1, 2, 3, 4]);     //=> Iterable<[2, 4]>
  *
  */
-export const filter = curryN(2, function*<T>(predicate: (t: T) => boolean, iterable: Iterable<T>) {
+export const filter = curryN(2, function* <T>(predicate: (t: T) => boolean, iterable: Iterable<T>) {
   for (const element of iterable) {
     if (predicate(element)) {
       yield element;

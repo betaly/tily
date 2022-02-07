@@ -7,4 +7,14 @@ import sum from 'ramda/src/sum';
 
 const arr = range(0, 99);
 
-console.log(sum(drop(10, map(x => x * 2, filter(x => x % 2, arr)))));
+console.log(
+  sum(
+    drop(
+      10,
+      map(
+        x => x * 2,
+        filter(x => x % 2, arr),
+      ),
+    ),
+  ),
+);

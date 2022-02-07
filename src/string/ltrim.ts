@@ -1,4 +1,3 @@
-
 /**
  * Removes all occurrences of needle from the beginning of haystack.
  *

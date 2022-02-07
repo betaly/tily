@@ -20,8 +20,6 @@ export function format(value: string, ...args: any[]): string {
   }
   return value.replace(_formatRegexp, function (match, group) {
     const idx = parseInt(group, 10);
-    return isNaN(idx) || idx < 0 || idx >= args.length ?
-      match :
-      args[idx];
+    return isNaN(idx) || idx < 0 || idx >= args.length ? match : args[idx];
   });
 }

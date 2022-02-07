@@ -5,9 +5,9 @@ const htmlEscapes = {
   '<': '&lt;',
   '>': '&gt;',
   '"': '&quot;',
-  '\'': '&#39;',
+  "'": '&#39;',
 };
-const replace = (char) => htmlEscapes[char];
+const replace = char => htmlEscapes[char];
 
 /**
  * Converts the characters "&", "<", ">", '"', and "'" in `string` to their

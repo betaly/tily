@@ -5,8 +5,11 @@ describe('memoizeWith', () => {
   it('uses createCache function for cache creating', () => {
     const createCache = jest.fn();
 
-    memoizeWith(createCache, () => ({} as any), () => {
-    });
+    memoizeWith(
+      createCache,
+      () => ({} as any),
+      () => {},
+    );
     expect(createCache).toHaveBeenCalled();
   });
 
@@ -40,7 +43,7 @@ describe('memoizeWith', () => {
       has: jest.fn(() => false),
       set: jest.fn(),
     };
-    const fn = jest.fn((x) => fnResult);
+    const fn = jest.fn(x => fnResult);
     const hasher = jest.fn(identity);
 
     const memoizedFn = memoizeWith(() => cache, hasher, fn);

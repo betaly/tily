@@ -22,6 +22,10 @@
  *      isBuffer({})                  //=> false
  *      isBuffer(function foo () {})  //=> false
  */
-export const isBuffer = (test: any): test is Buffer => test != null && test.constructor != null && typeof test.constructor.isBuffer === 'function' && test.constructor.isBuffer(test);
+export const isBuffer = (test: any): test is Buffer =>
+  test != null &&
+  test.constructor != null &&
+  typeof test.constructor.isBuffer === 'function' &&
+  test.constructor.isBuffer(test);
 
 export default isBuffer;

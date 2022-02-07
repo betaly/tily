@@ -38,8 +38,7 @@ describe('src/memoize/weak', () => {
     describe('with functions', () => {
       it('with the same function', () => {
         const {fn, memoizedFn} = prepare();
-        const testFn = () => {
-        };
+        const testFn = () => {};
 
         memoizedFn(testFn);
         memoizedFn(testFn);
@@ -48,10 +47,8 @@ describe('src/memoize/weak', () => {
       it('with different functions', () => {
         const {fn, memoizedFn} = prepare();
 
-        memoizedFn(() => {
-        });
-        memoizedFn(() => {
-        });
+        memoizedFn(() => {});
+        memoizedFn(() => {});
         expect(fn).toHaveBeenCalledTimes(2);
       });
     });

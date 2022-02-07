@@ -4,11 +4,10 @@ let isComponent: (test: any) => boolean;
 
 try {
   isComponent = require('react-is').isValidElementType;
-} catch (e) {
-}
+} catch (e) {}
 
 if (!isComponent) {
-  isComponent = (test) => typeof test === 'string' || typeof test === 'function' || (!!test && has('$$typeof', test));
+  isComponent = test => typeof test === 'string' || typeof test === 'function' || (!!test && has('$$typeof', test));
 }
 
 /**

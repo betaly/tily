@@ -1,8 +1,8 @@
 import {AssertTrue as Assert, IsExact} from 'conditional-type-checks';
 import {assert} from '../assert';
 
-describe('assert', function() {
-  it('assert', function() {
+describe('assert', function () {
+  it('assert', function () {
     type TestType1 = string | undefined;
     type Expected = string;
     const anything = undefined as any as TestType1;

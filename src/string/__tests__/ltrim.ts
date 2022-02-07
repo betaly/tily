@@ -1,7 +1,7 @@
 import assert from 'assert';
 import {ltrim} from '../ltrim';
 
-describe('string/ltrim', function() {
+describe('string/ltrim', function () {
   test('ltrim', () => {
     assert.strictEqual(ltrim('foo', 'f'), 'oo');
     assert.strictEqual(ltrim('foo', 'o'), 'foo');

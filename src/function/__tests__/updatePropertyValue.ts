@@ -9,15 +9,13 @@ describe('function/updatePropertyValue', () => {
   };
 
   it('should change name in function', () => {
-    const fn = () => {
-    };
+    const fn = () => {};
 
     checkPropertyChange(fn, 'name', 'newFn', 'newFn');
   });
 
   it('should change other property in function', () => {
-    const fn = () => {
-    };
+    const fn = () => {};
 
     fn.i = 'fn';
     checkPropertyChange(fn, 'i', 'newFn', 'newFn');

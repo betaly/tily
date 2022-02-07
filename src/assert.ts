@@ -17,8 +17,8 @@
  * // from now on `anything` is string
  *
  */
-export function assert(condition: any, msg: string = "no additional info provided"): asserts condition {
+export function assert(condition: any, msg: string = 'no additional info provided'): asserts condition {
   if (!condition) {
-    throw new Error("Assertion Error: " + msg);
+    throw new Error('Assertion Error: ' + msg);
   }
 }

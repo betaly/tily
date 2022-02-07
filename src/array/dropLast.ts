@@ -26,6 +26,8 @@ interface DropLast {
  *      dropLast(4, ['foo', 'bar', 'baz']); //=> []
  *      dropLast(3, 'ramda');               //=> 'ra'
  */
-export const dropLast = curryN(2, <T>(n: number, xs: ArrayLike<T>) => take(n < xs.length ? xs.length - n : 0, xs)) as DropLast;
+export const dropLast = curryN(2, <T>(n: number, xs: ArrayLike<T>) =>
+  take(n < xs.length ? xs.length - n : 0, xs),
+) as DropLast;
 
 export default dropLast;

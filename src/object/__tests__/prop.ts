@@ -12,8 +12,7 @@ describe('object/prop', () => {
   it('should return prop', () => {
     expect(prop('test', {test: 'a', test1: 'b'})).toBe('a');
 
-    function A() {
-    }
+    function A() {}
 
     A.prototype.test = 'c';
     expect(prop('test', new A())).toBe('c');

@@ -3,7 +3,7 @@ import debounce from '../debounce';
 describe('function/debounce', () => {
   it('should call function one time after "wait" ms', () => {
     let context;
-    const f = jest.fn(function() {
+    const f = jest.fn(function () {
       context = this;
     });
     const debounced = debounce(1000, f);

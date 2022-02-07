@@ -7,17 +7,14 @@ describe('is/promise', () => {
     expect(isPromise(null)).toBe(false);
     expect(isPromise({})).toBe(false);
     expect(isPromise('fwafwf')).toBe(false);
-    expect(isPromise(() => {
-    })).toBe(false);
+    expect(isPromise(() => {})).toBe(false);
     expect(isPromise(Promise.resolve())).toBe(true);
     expect(isPromise(Promise.reject().catch(noop))).toBe(true);
-    expect(isPromise(new Promise((res) => res(1)))).toBe(true);
-    const f = () => {
-    };
+    expect(isPromise(new Promise(res => res(1)))).toBe(true);
+    const f = () => {};
 
     expect(isPromise(f)).toBe(false);
-    f.then = () => {
-    };
+    f.then = () => {};
     expect(isPromise(f)).toBe(true);
   });
 });

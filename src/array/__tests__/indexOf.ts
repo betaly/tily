@@ -1,7 +1,7 @@
 import indexOf from '../indexOf';
 
 describe('array/indexOf', () => {
-  it('returns a number indicating an object\'s position in a list', () => {
+  it("returns a number indicating an object's position in a list", () => {
     const list = [1, 2, 3, 4];
 
     expect(indexOf(3, list)).toEqual(2);
@@ -49,10 +49,8 @@ describe('array/indexOf', () => {
   });
 
   it('finds function, compared by identity', () => {
-    const f = () => {
-    };
-    const g = () => {
-    };
+    const f = () => {};
+    const g = () => {};
     const list2 = [g, f, g, f];
 
     expect(indexOf(f, list2)).toEqual(1);
@@ -67,12 +65,9 @@ describe('array/indexOf', () => {
   });
 
   it('does not find function, compared by identity', () => {
-    const f = () => {
-    };
-    const g = () => {
-    };
-    const h = () => {
-    };
+    const f = () => {};
+    const g = () => {};
+    const h = () => {};
     const list3 = [g, f];
 
     expect(indexOf(h, list3)).toEqual(-1);

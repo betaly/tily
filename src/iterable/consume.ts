@@ -31,9 +31,12 @@ export function consume<T>(iterable: Iterable<T>, atMost: number = Number.POSITI
     consumed.push(next.value);
   }
 
-  return [consumed, {
-    [Symbol.iterator]() {
-      return iterator;
+  return [
+    consumed,
+    {
+      [Symbol.iterator]() {
+        return iterator;
+      },
     },
-  }];
+  ];
 }

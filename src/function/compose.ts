@@ -105,15 +105,16 @@ interface Compose {
  *
  *      f(3, 4); // -(3^4) + 1
  */
-export const compose = ((...fns) => (...args) => {
-  const n = fns.length - 1;
-  let result = fns[n](...args);
+export const compose = ((...fns) =>
+  (...args) => {
+    const n = fns.length - 1;
+    let result = fns[n](...args);
 
-  for (let i = n - 1; i >= 0; i--) {
-    result = fns[i](result);
-  }
+    for (let i = n - 1; i >= 0; i--) {
+      result = fns[i](result);
+    }
 
-  return result;
-}) as Compose;
+    return result;
+  }) as Compose;
 
 export default compose;

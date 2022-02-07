@@ -4,8 +4,7 @@ describe('object/propEq', () => {
   it('should return true if prop is equal to value', () => {
     expect(propEq('a', 1, {a: 1})).toBe(true);
 
-    function A() {
-    }
+    function A() {}
 
     A.prototype.a = 5;
     expect(propEq('a', 5, new A())).toBe(true);

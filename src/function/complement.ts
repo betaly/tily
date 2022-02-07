@@ -16,6 +16,8 @@ interface Complement {
  *      isNil(7); //=> false
  *      isNotNil(7); //=> true
  */
-export const complement = (<F extends Function>(fn: F) => (...args) => !fn(...args)) as Complement;
+export const complement = (<F extends Function>(fn: F) =>
+  (...args) =>
+    !fn(...args)) as Complement;
 
 export default complement;

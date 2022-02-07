@@ -40,7 +40,7 @@ export type Paths = ReadonlyArray<Prop>;
 
 export type Pattern = RegExp | string;
 
-export type ReplaceType<O, K extends Prop, V> = Pick<O, Exclude<keyof O, K>> & { [p in K]: V };
+export type ReplaceType<O, K extends Prop, V> = Pick<O, Exclude<keyof O, K>> & {[p in K]: V};
 
 /**
  * Obtain the values type of a array

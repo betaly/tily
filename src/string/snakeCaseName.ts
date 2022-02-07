@@ -17,7 +17,5 @@ import words from './words';
  *      snakeCaseName('Foo Bär'); //=> 'foo_b_r' only latin chars are supported
  */
 export default function snakeCaseName(str: string): string {
-  return words(str)
-    .join('_')
-    .toLowerCase();
+  return words(str).join('_').toLowerCase();
 }

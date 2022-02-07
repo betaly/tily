@@ -17,10 +17,15 @@ import {isLowerAsciiLetter} from './isLowerAsciiLetter';
  *      compareSubstring('aBCd', 'AbcDE', 1, 3, 1, 3);  //=> 0
  *      compareSubstring('aBCd', 'AbcDE', 1, 3, 2, 4);  //=> -1
  */
-export function compareSubstringIgnoreCase(a: string, b: string, aStart: number = 0, aEnd: number = a.length, bStart: number = 0, bEnd: number = b.length): number {
-
+export function compareSubstringIgnoreCase(
+  a: string,
+  b: string,
+  aStart: number = 0,
+  aEnd: number = a.length,
+  bStart: number = 0,
+  bEnd: number = b.length,
+): number {
   for (; aStart < aEnd && bStart < bEnd; aStart++, bStart++) {
-
     let codeA = a.charCodeAt(aStart);
     let codeB = b.charCodeAt(bStart);
 

@@ -35,23 +35,26 @@ interface ReduceWhile {
  *      reduceWhile(acc => acc.length < 3, (acc, x) => acc + x, '1', ['2', '3', '4', '5']) // '123'
  *
  */
-export const reduceWhile = curryN(4, <T, R>(pred: ReducePred<T, R>, fn: ReduceFunc<T, R>, acc: R, arr: ArrayLike<T> = []) => {
-  // eslint-disable-line max-params
-  if (isNil(arr)) {
+export const reduceWhile = curryN(
+  4,
+  <T, R>(pred: ReducePred<T, R>, fn: ReduceFunc<T, R>, acc: R, arr: ArrayLike<T> = []) => {
+    // eslint-disable-line max-params
+    if (isNil(arr)) {
+      return acc;
+    }
+
+    const length = arr.length;
+
+    for (
+      let index = 0, curr = arr[0];
+      index < length && pred(acc, curr, index, arr);
+      curr = arr[++index] // eslint-disable-line no-plusplus
+    ) {
+      acc = fn(acc, curr, index, arr); // eslint-disable-line no-param-reassign
+    }
+
     return acc;
-  }
-
-  const length = arr.length;
-
-  for (
-    let index = 0, curr = arr[0];
-    index < length && pred(acc, curr, index, arr);
-    curr = arr[++index] // eslint-disable-line no-plusplus
-  ) {
-    acc = fn(acc, curr, index, arr); // eslint-disable-line no-param-reassign
-  }
-
-  return acc;
-}) as ReduceWhile;
+  },
+) as ReduceWhile;
 
 export default reduceWhile;

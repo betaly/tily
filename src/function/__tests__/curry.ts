@@ -1,6 +1,6 @@
 import curry from '../curry';
 
-const jestFn = (fn) => {
+const jestFn = fn => {
   const mock = jest.fn(fn);
 
   Object.defineProperty(mock, 'length', {
@@ -22,7 +22,7 @@ describe('function/curry', () => {
   });
 
   it('should return function if number of parameters is not enough', () => {
-    const f: (x: number) => number = jestFn((a) => a * 2) as any;
+    const f: (x: number) => number = jestFn(a => a * 2) as any;
     const curried: any = curry(f);
     let called: any = curried();
 

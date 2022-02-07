@@ -18,6 +18,6 @@ import words from './words';
  */
 export default function kebabCaseName(str: string): string {
   return words(str)
-    .map((word) => word.toLowerCase())
+    .map(word => word.toLowerCase())
     .join('-');
 }

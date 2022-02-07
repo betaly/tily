@@ -51,8 +51,7 @@ describe('clone', () => {
 
   it('should copy class', () => {
     class User {
-      constructor(public firstName: string, public lastName: string) {
-      }
+      constructor(public firstName: string, public lastName: string) {}
     }
 
     const obj = {user: new User('Tom', 'John')};

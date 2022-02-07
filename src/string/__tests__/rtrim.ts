@@ -14,5 +14,4 @@ describe('string/rtrim', () => {
     assert.strictEqual(rtrim('', ''), '');
     assert.strictEqual(rtrim('', '/'), '');
   });
-
-})
+});

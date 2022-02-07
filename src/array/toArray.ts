@@ -20,7 +20,7 @@ interface ToArray {
  *      toArray(null)       //=> []
  *      toArray(undefined)  //=> []
  */
-export const toArray = ((val) => {
+export const toArray = (val => {
   if (val == null) {
     return [];
   }

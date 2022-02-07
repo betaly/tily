@@ -15,7 +15,7 @@ interface FromPairs {
  *      fromPairs([['a', 1], ['b', 2], ['c', 3]]); //=> {a: 1, b: 2, c: 3}
  */
 export const fromPairs = (<K extends Prop, V>(arr: KeyValuePairs<K, V> = []) => {
-  const result: { [k in K]: V } = {} as any;
+  const result: {[k in K]: V} = {} as any;
 
   for (let i = 0; i < arr.length; i++) {
     result[arr[i][0]] = arr[i][1];

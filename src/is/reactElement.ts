@@ -4,11 +4,10 @@ let isElement: (test: any) => boolean;
 
 try {
   isElement = require('react-is').isElement;
-} catch (e) {
-}
+} catch (e) {}
 
 if (!isElement) {
-  isElement = (test) => !!test && has('$$typeof', test);
+  isElement = test => !!test && has('$$typeof', test);
 }
 
 /**

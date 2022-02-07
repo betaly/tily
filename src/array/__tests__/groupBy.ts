@@ -2,9 +2,9 @@ import groupBy from '../groupBy';
 
 describe('array/groupBy', () => {
   it('test', () => {
-    const isPositive = jest.fn((x) => x > 0);
-    const isNegative = jest.fn((x) => x < 0);
-    const isZero = jest.fn((x) => x === 0);
+    const isPositive = jest.fn(x => x > 0);
+    const isNegative = jest.fn(x => x < 0);
+    const isZero = jest.fn(x => x === 0);
 
     const arr = [-1, 2, 0, -3, 5, 1, 2, 'a', 3, 4, 5, 9, -3, 2, {}, -3, 9, 0, 1];
 

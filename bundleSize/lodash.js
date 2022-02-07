@@ -7,4 +7,14 @@ import drop from 'lodash/drop';
 
 const arr = range(0, 99);
 
-console.log(sum(drop(map(filter(arr, x => x % 2), x => x * 2), 10)));
+console.log(
+  sum(
+    drop(
+      map(
+        filter(arr, x => x % 2),
+        x => x * 2,
+      ),
+      10,
+    ),
+  ),
+);

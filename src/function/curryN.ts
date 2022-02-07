@@ -17,16 +17,20 @@ interface CurryN {
 
   <T1, T2, TResult extends T2>(n: 2, fn: (a: T1, b: T2) => b is TResult): CurriedTypeGuard2<T1, T2, TResult>;
 
-  <T1, T2, T3, TResult extends T3>(n: 3, fn: (a: T1, b: T2, c: T3) => c is TResult): CurriedTypeGuard3<T1,
+  <T1, T2, T3, TResult extends T3>(n: 3, fn: (a: T1, b: T2, c: T3) => c is TResult): CurriedTypeGuard3<
+    T1,
     T2,
     T3,
-    TResult>;
+    TResult
+  >;
 
-  <T1, T2, T3, T4, TResult extends T4>(n: 4, fn: (a: T1, b: T2, c: T3, d: T4) => d is TResult): CurriedTypeGuard4<T1,
+  <T1, T2, T3, T4, TResult extends T4>(n: 4, fn: (a: T1, b: T2, c: T3, d: T4) => d is TResult): CurriedTypeGuard4<
+    T1,
     T2,
     T3,
     T4,
-    TResult>;
+    TResult
+  >;
 
   <T1, T2, T3, T4, T5, TResult extends T5>(
     n: 5,
@@ -44,23 +48,32 @@ interface CurryN {
 
   <T1, T2, T3, TResult>(n: 3, fn: (a: T1, b: T2, c: T3) => TResult): CurriedFunction3<T1, T2, T3, TResult>;
 
-  <T1, T2, T3, T4, TResult>(n: 4, fn: (a: T1, b: T2, c: T3, d: T4) => TResult): CurriedFunction4<T1,
+  <T1, T2, T3, T4, TResult>(n: 4, fn: (a: T1, b: T2, c: T3, d: T4) => TResult): CurriedFunction4<
+    T1,
     T2,
     T3,
     T4,
-    TResult>;
+    TResult
+  >;
 
-  <T1, T2, T3, T4, T5, TResult>(n: 5, fn: (a: T1, b: T2, c: T3, d: T4, e: T5) => TResult): CurriedFunction5<T1,
+  <T1, T2, T3, T4, T5, TResult>(n: 5, fn: (a: T1, b: T2, c: T3, d: T4, e: T5) => TResult): CurriedFunction5<
+    T1,
     T2,
     T3,
     T4,
     T5,
-    TResult>;
+    TResult
+  >;
 
-  <T1, T2, T3, T4, T5, T6, TResult>(
-    n: 6,
-    fn: (a: T1, b: T2, c: T3, d: T4, e: T5, f: T6) => TResult,
-  ): CurriedFunction6<T1, T2, T3, T4, T5, T6, TResult>;
+  <T1, T2, T3, T4, T5, T6, TResult>(n: 6, fn: (a: T1, b: T2, c: T3, d: T4, e: T5, f: T6) => TResult): CurriedFunction6<
+    T1,
+    T2,
+    T3,
+    T4,
+    T5,
+    T6,
+    TResult
+  >;
 
   (n: number, fn: (...a: any[]) => any): (...a: any[]) => any;
 }
@@ -93,7 +106,7 @@ export const curryN = ((length: number, fn: Function) => {
       return fn.apply(this, args);
     }
 
-    return arity(length - args.length, function(...newArgs) {
+    return arity(length - args.length, function (...newArgs) {
       return curried.apply(this, args.concat(newArgs));
     });
   }
