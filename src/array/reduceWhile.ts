@@ -17,7 +17,7 @@ interface ReduceWhile {
 
 /**
  * Returns a single item by iterating through the list, successively calling
- * the iterator function. reduceWhile also takes a predicate that is evaluated
+ * the iterable function. reduceWhile also takes a predicate that is evaluated
  * before each step. If the predicate returns false, it "short-circuits"
  * the iteration and returns the current value of the accumulator.
  *
@@ -25,7 +25,7 @@ interface ReduceWhile {
  *
  * @param {Function} pred The predicate function.
  *        If it returns a truthy value, reduce continues. Receives the accumulator and the current element
- * @param {Function} fn The iterator function. Receives four values,
+ * @param {Function} fn The iterable function. Receives four values,
  *        the accumulator, the current element from the array, its index, and the original array.
  * @param {*} acc The accumulator value.
  * @param {Array} arr The list to iterate over.

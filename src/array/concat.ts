@@ -23,9 +23,9 @@ interface Concat {
  *
  * @example
  *
- *      concat('ABC', 'DEF'); // 'ABCDEF'
- *      concat([4, 5, 6], [1, 2, 3]); //=> [4, 5, 6, 1, 2, 3]
- *      concat([], []); //=> []
+ *      concat('ABC', 'DEF');             // 'ABCDEF'
+ *      concat([4, 5, 6], [1, 2, 3]);     //=> [4, 5, 6, 1, 2, 3]
+ *      concat([], []);                   //=> []
  */
 export const concat = curryN(2, <U, V>(a: ArrayLike<U> = [], b: ArrayLike<V> = []) => {
   if (isArray(a)) {

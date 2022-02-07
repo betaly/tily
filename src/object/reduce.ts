@@ -15,10 +15,10 @@ interface ReduceObj {
 
 /**
  * Returns a single item by iterating through the obj, successively calling
- * the iterator function and passing it an accumulator value, current
+ * the iterable function and passing it an accumulator value, current
  * value and current key from the obj, and then passing the result to the next call.
  *
- * @param {Function} fn The iterator function. Receives three argument, `accumulator`, `value`, `key`.
+ * @param {Function} fn The iterable function. Receives three argument, `accumulator`, `value`, `key`.
  * @param {*} acc The accumulator value.
  * @param {Object} obj The object to iterate over.
  * @return {*} The final, accumulated value.

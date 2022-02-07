@@ -13,10 +13,10 @@ interface Reduce {
 
 /**
  * Returns a single item by iterating through the list, successively calling
- * the iterator function and passing it an accumulator value and the current
+ * the iterable function and passing it an accumulator value and the current
  * value from the array, and then passing the result to the next call.
  *
- * @param {Function} fn The iterator function. Receives two values, the accumulator and the
+ * @param {Function} fn The iterable function. Receives two values, the accumulator and the
  *        current element from the array.
  * @param {*} acc The accumulator value.
  * @param {Array} arr The list to iterate over.
