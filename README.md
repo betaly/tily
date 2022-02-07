@@ -14,21 +14,21 @@ $ npm install tily
 
 - [Fast](#benchmarks)
 - [Small](#bundle-size)
-- [Fully tested](https://coveralls.io/github/mindary/tily)
-- [Documented](https://mindary.gitr.io/tily/)
+- [Fully tested](https://coveralls.io/github/betaly/tily)
+- [Documented](https://betaly.github.io/tily/)
 - Purely functional
 - Modern codebase
 
 ## Structure of the library
 
-- [`/object`](https://github.com/mindary/tily/tree/master/src/object) – for objects
-- [`/string`](https://github.com/mindary/tily/tree/master/src/string) – for strings
-- [`/promise`](https://github.com/mindary/tily/tree/master/src/promise) – for promises
-- [`/array`](https://github.com/mindary/tily/tree/master/src/array) – for arrays or array-like objects
-- [`/function`](https://github.com/mindary/tily/tree/master/src/function) – for functions – composition, currying and so
+- [`/object`](https://github.com/betaly/tily/tree/master/src/object) – for objects
+- [`/string`](https://github.com/betaly/tily/tree/master/src/string) – for strings
+- [`/promise`](https://github.com/betaly/tily/tree/master/src/promise) – for promises
+- [`/array`](https://github.com/betaly/tily/tree/master/src/array) – for arrays or array-like objects
+- [`/function`](https://github.com/betaly/tily/tree/master/src/function) – for functions – composition, currying and so
   on, also a set of simple functions (noop, T, F)
-- [`/is`](https://github.com/mindary/tily/tree/master/src/is) – set of type checking methods
-- [`/`](https://github.com/mindary/tily/tree/master/src) – root contains utilities which don't satisfy any of the above
+- [`/is`](https://github.com/betaly/tily/tree/master/src/is) – set of type checking methods
+- [`/`](https://github.com/betaly/tily/tree/master/src) – root contains utilities which don't satisfy any of the above
   categories or are universal
 
 ## Usage
@@ -82,4 +82,4 @@ $ npm run benchmark
 | import ... from 'ramda/src/...' | 10 kb       |
 | import ... from 'tily/...'      | 2.32 kb     |
 
-For detailed comparison with specific libraries see [COMPARE.md](https://github.com/mindary/tily/tree/master/COMPARE.md)
+For detailed comparison with specific libraries see [COMPARE.md](https://github.com/betaly/tily/tree/master/COMPARE.md)
