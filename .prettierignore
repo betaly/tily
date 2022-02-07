@@ -6,5 +6,6 @@ scripts
 *.json
 *.yml
 CHANGELOG.md
-dist
 jest.config.js
+dist
+docs
