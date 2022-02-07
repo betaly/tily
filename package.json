@@ -18,12 +18,16 @@
   "scripts": {
     "copy:assets": "cpy package.json .npmignore LICENSE README.md CHANGELOG.md dist",
     "version": "npm run copy:assets",
-    "prerelease": "cross-env CI=1 npm run build && npm run test",
+    "prerelease": "cross-env CI=1 npm run build && npm run test && prettier:check",
     "release": "np --no-2fa --no-tests --contents ./dist",
     "build": "tsc -p tsconfig.json && npm run copy:assets",
+    "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\" \"**/*.md\"",
+    "prettier:check": "npm run prettier:cli -- --check",
+    "prettier:fix": "npm run prettier:cli -- --write",
     "benchmark": "ts-node --project tsconfig.benchmark.json benchmark.ts",
     "prebenchmark": "npm install --no-save ts-node lodash ramda lazy.js underscore",
     "docs": "typedoc",
+    "pretest": "npm run prettier:fix",
     "test": "jest --coverage",
     "test:ci": "npm run test -- --maxWorkers=4 && cat ./coverage/lcov.info | coveralls",
     "test:ci:coveralls": "npm run test -- --maxWorkers=4"
