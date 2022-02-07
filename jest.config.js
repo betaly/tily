@@ -12,5 +12,5 @@ module.exports = {
       },
     },
   },
-  testMatch: ['**/__tests__/*.+(ts|tsx|js|jsx)'],
+  testMatch: ['**/__tests__/*.test.+(ts|tsx|js|jsx)'],
 };
