@@ -18,7 +18,7 @@ interface Map {
  *
  * @example
  *
- *      map(n => 2 * n, [1, 2, 3, 4]);    // Iterable<[2, 4, 6, 8]>
+ *      map(n => 2 * n, [1, 2, 3, 4]);    //=> Iterable<[2, 4, 6, 8]>
  */
 export const map = curryN(2, function* <T, R>(fn: IterableMapFunc<T, R>, iterable: Iterable<T>) {
   let index = 0;
