@@ -1,8 +1,9 @@
 {
-  "tsconfig": "tsconfig.json",
+  "out": "docs",
   "entryPointStrategy": "Expand",
   "entryPoints": ["src"],
   "exclude": [
+    "./node_modules",
     "**/__tests__/*",
     "**/__benchmarks__/*"
   ]
