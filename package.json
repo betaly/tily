@@ -1,6 +1,6 @@
 {
   "name": "tily",
-  "version": "2.12.0",
+  "version": "2.13.0",
   "description": "Fast, small and purely functional utility library",
   "author": "TY",
   "repository": "https://github.com/betaly/tily",
