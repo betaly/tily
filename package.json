@@ -18,7 +18,7 @@
   "scripts": {
     "copy:assets": "cpy package.json .npmignore LICENSE README.md CHANGELOG.md dist",
     "version": "npm run copy:assets",
-    "prerelease": "cross-env CI=1 npm run build && npm run test && prettier:check",
+    "prerelease": "cross-env CI=1 npm run build && npm run test",
     "release": "np --no-2fa --no-tests --contents ./dist",
     "build": "tsc -p tsconfig.json && npm run copy:assets",
     "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\" \"**/*.md\"",
