@@ -11,7 +11,10 @@ describe('is/object', () => {
   });
 
   it('test type guard', () => {
-    const obj: any = {a: 5, b: 3};
+    class Foo {
+      constructor(public a: number, public b: number) {}
+    }
+    const obj: any = new Foo(5, 3);
 
     if (isObject(obj)) {
       expect(obj.a).toBe(5);

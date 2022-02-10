@@ -6,8 +6,9 @@
  * @example
  *
  *      isObject({ a: 'test' });  //=> true
+ *      isObject(new Foo());      //=> true
  *      isObject(null);           //=> false
  */
-export const isObject = (test): test is Record<any, any> => test !== null && typeof test === 'object';
+export const isObject = <T = Record<any, any>>(test: unknown): test is T => test !== null && typeof test === 'object';
 
 export default isObject;
