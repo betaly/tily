@@ -1,21 +1,35 @@
-const camelCaseRegex = /([a-z])([A-Z])/g;
-const nonCharRegex = /[^a-zA-Z]+/g;
+import {unicodeWords} from './unicodeWords';
+
+const hasUnicodeWord = RegExp.prototype.test.bind(/[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/);
+
+/** Used to match words composed of alphanumeric characters. */
+const reAsciiWord = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
+
+function asciiWords(string) {
+  return string.match(reAsciiWord);
+}
 
 /**
- * Splits string into an array of its words.
+ * Splits `string` into an array of its words.
  *
- * This function supports only latin chars.
- *
- * @param {String} str The string to split.
- * @return {String[]} String' words.
+ * @category String
+ * @param {string} [string=''] The string to inspect.
+ * @param {RegExp|string} [pattern] The pattern to match words.
+ * @returns {Array} Returns the words of `string`.
  * @example
  *
- *      words('fooBarZoo');   //=> ['foo', 'Bar', 'Zoo']
- *      words('foo_bar_zoo'); //=> ['foo', 'bar', 'zoo']
- *      words('foo-bar-zoo'); //=> ['foo', 'bar', 'zoo']
- *      words('foo bar zoo'); //=> ['foo', 'bar', 'zoo']
- *      words('fooBär');      //=> ['foo', 'B', 'r'] only latin chars are supported
+ * words('fred, barney, & pebbles')
+ * // => ['fred', 'barney', 'pebbles']
+ *
+ * words('fred, barney, & pebbles', /[^, ]+/g)
+ * // => ['fred', 'barney', '&', 'pebbles']
  */
-export default function words(str: string): string[] {
-  return str.replace(camelCaseRegex, (_, char1: string, char2: string) => `${char1} ${char2}`).split(nonCharRegex);
+export function words(string = '', pattern?: RegExp | string) {
+  if (pattern === undefined) {
+    const result = hasUnicodeWord(string) ? unicodeWords(string) : asciiWords(string);
+    return result || [];
+  }
+  return string.match(pattern) || [];
 }
+
+export default words;

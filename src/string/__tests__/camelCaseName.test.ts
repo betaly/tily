@@ -9,7 +9,7 @@ describe('string/camelCaseName', () => {
     ['foo_bar', 'fooBar'],
     ['FOO_BAR', 'fooBar'],
     ['fooBar', 'fooBar'],
-    ['Foo Bär', 'fooBR'],
+    ['Foo Bär', 'fooBär'],
   ])('should return camel cased string for %s: %s', (str, expected) => {
     expect(camelCaseName(str)).toEqual(expected);
   });

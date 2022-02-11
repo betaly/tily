@@ -14,7 +14,7 @@ import words from './words';
  *      kebabCase('fooBar');  //=> 'foo-bar'
  *      kebabCase('foo_bar'); //=> 'foo-bar'
  *      kebabCase('FOO_BAR'); //=> 'foo-bar'
- *      kebabCase('Foo Bär'); //=> 'foo-b-r' — only latin chars are supported
+ *      kebabCase('Foo Bär'); //=> 'foo-bär'
  */
 export default function kebabCaseName(str: string): string {
   return words(str)

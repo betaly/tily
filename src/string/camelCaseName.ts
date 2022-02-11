@@ -16,7 +16,7 @@ import upperFirst from './upperFirst';
  *      camelCase('foo_bar'); //=> 'fooBar'
  *      camelCase('FOO_BAR'); //=> 'fooBar'
  *      camelCase('fooBar');  //=> 'fooBar'
- *      camelCase('Foo Bär'); //=> 'fooBR' only latin chars are supported
+ *      camelCase('Foo Bär'); //=> 'fooBär'
  */
 export default function camelCaseName(str: string): string {
   return words(str)

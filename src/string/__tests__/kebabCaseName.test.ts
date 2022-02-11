@@ -9,7 +9,7 @@ describe('string/kebabCaseName', () => {
     ['foo-bar', 'foo-bar'],
     ['foo_Bar', 'foo-bar'],
     ['FOO_BAR', 'foo-bar'],
-    ['Foo Bär', 'foo-b-r'],
+    ['Foo Bär', 'foo-bär'],
   ])('should return kebab cased string for %s: %s', (str, expected) => {
     expect(kebabCaseName(str)).toEqual(expected);
   });

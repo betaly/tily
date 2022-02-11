@@ -9,7 +9,7 @@ describe('string/snakeCaseName', () => {
     ['foo_Bar', 'foo_bar'],
     ['foo-Bar', 'foo_bar'],
     ['FOO_BAR', 'foo_bar'],
-    ['Foo Bär', 'foo_b_r'],
+    ['Foo Bär', 'foo_bär'],
   ])('should return snake cased string for %s: %s', (str, expected) => {
     expect(snakeCaseName(str)).toEqual(expected);
   });

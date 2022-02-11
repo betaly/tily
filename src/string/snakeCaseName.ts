@@ -14,7 +14,7 @@ import words from './words';
  *      snakeCaseName('fooBar');  //=> 'foo_bar'
  *      snakeCaseName('foo-bar'); //=> 'foo_bar'
  *      snakeCaseName('FOO-BAR'); //=> 'foo_bar'
- *      snakeCaseName('Foo Bär'); //=> 'foo_b_r' only latin chars are supported
+ *      snakeCaseName('Foo Bär'); //=> 'foo_bär' only latin chars are supported
  */
 export default function snakeCaseName(str: string): string {
   return words(str).join('_').toLowerCase();
