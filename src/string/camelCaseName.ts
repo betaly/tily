@@ -1,5 +1,5 @@
-import words from './words';
-import upperFirst from './upperFirst';
+import {words} from './words';
+import {upperFirst} from './upperFirst';
 
 /**
  * Converts string to camel case.
@@ -18,7 +18,7 @@ import upperFirst from './upperFirst';
  *      camelCase('fooBar');  //=> 'fooBar'
  *      camelCase('Foo Bär'); //=> 'fooBär'
  */
-export default function camelCaseName(str: string): string {
+export function camelCaseName(str: string): string {
   return words(str)
     .map((word, index) => {
       if (index === 0) {
@@ -29,3 +29,5 @@ export default function camelCaseName(str: string): string {
     })
     .join('');
 }
+
+export default camelCaseName;

@@ -9,7 +9,7 @@
  *      upperFirst('über'); //=> 'Über'
  *      upperFirst('FOO');  //=> 'FOO'
  */
-function upperFirst(str: string): string {
+export function upperFirst(str: string): string {
   return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 }
 

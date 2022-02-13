@@ -16,8 +16,10 @@ import words from './words';
  *      kebabCase('FOO_BAR'); //=> 'foo-bar'
  *      kebabCase('Foo Bär'); //=> 'foo-bär'
  */
-export default function kebabCaseName(str: string): string {
+export function kebabCaseName(str: string): string {
   return words(str)
     .map(word => word.toLowerCase())
     .join('-');
 }
+
+export default kebabCaseName;
