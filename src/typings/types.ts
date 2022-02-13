@@ -35,6 +35,10 @@ export type ObjPredBy<O> = ObjBaseBy<O, boolean>;
 export type Func<R = any> = (...args) => R;
 export type Func1<R = any> = (arg) => R;
 
+export type AbstractConstructor<T> = abstract new (...args: any[]) => T;
+export type ConcreteConstructor<T> = new (...args: any[]) => T;
+export type Constructor<T> = AbstractConstructor<T> | ConcreteConstructor<T>;
+
 export type Prop = keyof any;
 export type Paths = ReadonlyArray<Prop>;
 
