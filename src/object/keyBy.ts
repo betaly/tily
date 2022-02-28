@@ -20,7 +20,7 @@ interface KeyBy {
  * @returns {Object} Returns the composed aggregate object.
  * @example
  *
- * keyBy(x => x < 2, { a: 0, b: 1, c: 3});//=> { false: 1, true: 3 }
+ *      keyBy(x => x < 2, { a: 0, b: 1, c: 3});//=> { false: 1, true: 3 }
  */
 
 export const keyBy = curryN(2, <O extends Record<any, any>>(fn: ObjBaseBy<O, string>, obj: O = {} as any) => {

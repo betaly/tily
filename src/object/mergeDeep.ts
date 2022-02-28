@@ -11,7 +11,7 @@ import objectKeys from './keys';
  * @return {Object}
  * @example
  *
- * mergeDeep({ 'name': 'fred', 'info': { 'age': 10, 'sex': 'm' } }, { 'info': { 'age': 40 }); //=> { 'name': 'fred', 'info': { 'age': 40, 'sex': 'm' } }
+ *      mergeDeep({ 'name': 'fred', 'info': { 'age': 10, 'sex': 'm' } }, { 'info': { 'age': 40 }); //=> { 'name': 'fred', 'info': { 'age': 40, 'sex': 'm' } }
  */
 export const mergeDeep = curryN(2, (...sources: any[]) => {
   const result = sources[0] || {};

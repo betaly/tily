@@ -9,8 +9,7 @@ import objectKeys from './keys';
  * @return {Object}
  * @example
  *
- * defaultsDeep({ 'a': { 'b': 2 } }, { 'a': { 'b': 1, 'c': 3 } });
- * //=> { 'a': { 'b': 2, 'c': 3 } }
+ *      defaultsDeep({ 'a': { 'b': 2 } }, { 'a': { 'b': 1, 'c': 3 } }); //=> { 'a': { 'b': 2, 'c': 3 } }
  */
 export const defaultsDeep = curryN(2, (...sources: any[]) => {
   const result = sources[0] || {};

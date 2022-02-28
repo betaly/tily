@@ -22,7 +22,7 @@ export interface Merge {
  * @return {Object}
  * @example
  *
- * merge({ 'name': 'fred', 'age': 10 }, { 'age': 40 }); //=> { 'name': 'fred', 'age': 40 }
+ *      merge({ 'name': 'fred', 'age': 10 }, { 'age': 40 }); //=> { 'name': 'fred', 'age': 40 }
  */
 export const merge = curryN(2, (target: Record<any, any>, ...sources: Record<any, any>[]) =>
   Object.assign(target, ...sources),

@@ -35,7 +35,7 @@ export interface MergeWith {
  * @return {Object}
  * @example
  *
- * mergeWith((x, y) => x + y, { 'name': 'fred', 'age': 10 }, { 'age': 40 }); //=> { 'name': 'fred', 'age': 50 }
+ *      mergeWith((x, y) => x + y, { 'name': 'fred', 'age': 10 }, { 'age': 40 }); //=> { 'name': 'fred', 'age': 50 }
  */
 export const mergeWith = curryN(3, (fn: MergeFunc<any, any, any>, ...sources) => {
   const result: Record<any, any> = assign(sources[0]);

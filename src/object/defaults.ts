@@ -24,8 +24,7 @@ export interface Defaults {
  * @return {Object}
  * @example
  *
- * defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred' });
- * //=> { 'user': 'barney', 'age': 36 }
+ *      defaults({ 'user': 'barney' }, { 'age': 36 }, { 'user': 'fred' }); //=> { 'user': 'barney', 'age': 36 }
  */
 export const defaults = curryN(2, (...sources: Record<any, any>[]) => {
   const result = sources[0] || {};
