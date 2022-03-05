@@ -68,6 +68,9 @@
   "peerDependencies": {
     "react-is": "*"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "files": [
     "**/*"
   ],
