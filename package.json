@@ -16,27 +16,28 @@
   "sideEffects": false,
   "license": "Apache-2.0",
   "scripts": {
-    "copy:assets": "cpy package.json .npmignore LICENSE README.md CHANGELOG.md dist",
-    "version": "npm run copy:assets",
-    "prerelease": "cross-env CI=1 npm run build && npm run test",
-    "release": "np --no-2fa --no-tests --contents ./dist",
-    "build": "tsc -p tsconfig.json && npm run copy:assets",
+    "copy:assets": "cpy 'package.json' 'LICENSE' 'README.md' 'CHANGELOG.md' dist",
+    "version": "yarn copy:assets",
+    "prerelease": "cross-env CI=1 yarn build && yarn test",
+    "release": "yarn prerelease && np --no-2fa --no-tests --contents ./dist",
+    "build": "tsc -p tsconfig.json && yarn copy:assets",
     "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\" \"**/*.md\"",
-    "prettier:check": "npm run prettier:cli -- --check",
-    "prettier:fix": "npm run prettier:cli -- --write",
+    "prettier:check": "yarn prettier:cli --check",
+    "prettier:fix": "yarn prettier:cli --write",
     "benchmark": "ts-node --project tsconfig.benchmark.json benchmark.ts",
-    "prebenchmark": "npm install --no-save ts-node lodash ramda lazy.js underscore",
     "docs": "typedoc && touch docs/.nojekyll",
     "docs:clean": "rm -rf docs",
-    "docs:rebuild": "npm run docs:clean && npm run docs",
-    "docs:serve": "npm run docs:rebuild && hs docs -o",
+    "docs:rebuild": "yarn docs:clean && yarn docs",
+    "docs:serve": "yarn docs:rebuild && hs docs -o",
     "docs:deploy": "ts-node scripts/docs.ts",
-    "pretest": "npm run prettier:fix",
-    "test": "jest --coverage",
-    "test:ci": "npm run test -- --maxWorkers=4 && cat ./coverage/lcov.info | coveralls",
-    "test:ci:coveralls": "npm run test -- --maxWorkers=4"
+    "clean": "nb-clean 'dist' '*.tsbuildinfo'",
+    "pretest": "yarn clean && yarn build",
+    "posttest": "yarn prettier:check",
+    "test": "yarn pretest && jest --coverage && yarn posttest",
+    "test:coverage": "jest --collectCoverage --coverageDirectory=\"./coverage\" --reporters=default --reporters=jest-junit --watchAll=false"
   },
   "devDependencies": {
+    "@nutol/build": "^0.2.6",
     "@types/fs-extra": "^9.0.13",
     "@types/gh-pages": "^3.2.1",
     "@types/jest": "^27.4.1",
@@ -47,15 +48,20 @@
     "gh-pages": "^3.2.3",
     "http-server": "^14.1.0",
     "jest": "^27.5.1",
+    "jest-junit": "^13.0.0",
     "jsdom": "^19.0.0",
+    "lazy.js": "^0.5.1",
+    "lodash": "^4.17.21",
     "prettier": "^2.5.1",
+    "ramda": "^0.28.0",
     "react": "^17.0.2",
     "react-is": "^17.0.2",
     "ts-expect": "^1.3.0",
     "ts-jest": "^27.1.3",
-    "ts-node": "^10.5.0",
+    "ts-node": "^10.6.0",
     "typedoc": "^0.22.12",
     "typescript": "^4.5.5",
+    "underscore": "^1.13.2",
     "walker": "^1.0.8",
     "zx": "^5.2.0"
   },
@@ -65,7 +71,5 @@
   "files": [
     "**/*"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  }
+  "packageManager": "yarn@3.2.0"
 }

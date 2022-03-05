@@ -1,3 +1,19 @@
+# Cache
+.eslintcache
+.idea
+.npm
+.yarnclean
+.data
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
 node_modules
 build
 /docs

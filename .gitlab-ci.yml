@@ -11,12 +11,21 @@ cache:
     - node_modules/
 
 before_script:
-- npm install
+  - node -v
+  - npm --version
+  - yarn --version
+  - yarn install
 
 test:
   script:
-  - npm run test:ci:coveralls
-  coverage: /All\sfiles.*?\s+(\d+.\d+)/
+    - yarn test:coverage
+  coverage: /Statements\s+:\s(\d+.?\d+)%/
+  artifacts:
+    when: always
+    paths:
+      # save coverage results
+      - coverage
+    expire_in: 10 days
 
 pages:
   stage: deploy
