@@ -19,7 +19,7 @@
     "copy:assets": "cpy 'package.json' 'LICENSE' 'README.md' 'CHANGELOG.md' dist",
     "version": "yarn copy:assets",
     "prerelease": "cross-env CI=1 yarn build && yarn test",
-    "release": "yarn prerelease && np --no-2fa --no-tests --contents ./dist",
+    "release": "yarn prerelease && np --no-2fa --no-yarn --no-tests --contents ./dist",
     "build": "tsc -p tsconfig.json && yarn copy:assets",
     "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\" \"**/*.md\"",
     "prettier:check": "yarn prettier:cli --check",

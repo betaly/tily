@@ -1,8 +1,8 @@
 # Tily
 
-> Fast, small and purely functional utility library
-
-`Tily` is forked from [Tinkoff Utils](https://github.com/Tinkoff/utils.js)
+> Fast, small and purely functional utility library.
+>
+> [API Document](https://betaly.github.io/tily/)
 
 ## Install
 
