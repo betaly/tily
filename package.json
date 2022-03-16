@@ -18,7 +18,7 @@
   "scripts": {
     "copy:assets": "cpy 'package.json' 'LICENSE' 'README.md' 'CHANGELOG.md' dist",
     "version": "yarn copy:assets",
-    "prerelease": "cross-env CI=1 yarn build && yarn test",
+    "prerelease": "yarn test",
     "release": "yarn prerelease && np --no-2fa --no-yarn --no-cleanup --no-tests --contents ./dist",
     "build": "tsc -p tsconfig.json && yarn copy:assets",
     "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\" \"**/*.md\"",
@@ -34,7 +34,7 @@
     "pretest": "yarn clean && yarn build",
     "posttest": "yarn prettier:check",
     "test": "yarn pretest && jest --coverage && yarn posttest",
-    "test:coverage": "jest --collectCoverage --coverageDirectory=\"./coverage\" --reporters=default --reporters=jest-junit --watchAll=false"
+    "test:ci": "jest --collectCoverage --coverageDirectory=\"./coverage\" --reporters=default --reporters=jest-junit --watchAll=false"
   },
   "devDependencies": {
     "@nutol/build": "^0.2.6",
