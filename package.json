@@ -29,7 +29,7 @@
     "docs:clean": "rm -rf docs",
     "docs:rebuild": "yarn docs:clean && yarn docs",
     "docs:serve": "yarn docs:rebuild && hs docs -o",
-    "docs:deploy": "ts-node scripts/docs.ts",
+    "docs:deploy": "scripts/docs.js",
     "clean": "nb-clean 'dist' '*.tsbuildinfo'",
     "pretest": "yarn clean && yarn build",
     "posttest": "yarn prettier:check",
