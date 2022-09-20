@@ -1,6 +1,13 @@
 import throttleEnd from '../throttleEnd';
 
 describe('function/throttleEnd', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
   it('should call function at most once after "wait" ms at "wait" ms period', () => {
     // eslint-disable-line max-statements
     let context;

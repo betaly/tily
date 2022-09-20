@@ -1,6 +1,14 @@
 import debounce from '../debounce';
 
 describe('function/debounce', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   it('should call function one time after "wait" ms', () => {
     let context;
     const f = jest.fn(function () {

@@ -1,10 +1,10 @@
 // eslint-disable-next-line import/no-commonjs
 
 module.exports = {
-  timers: 'legacy',
+  // fakeTimers: {
+  //   legacyFakeTimers: true,
+  // },
   preset: 'ts-jest',
-  testURL: 'http://localhost/',
-  testEnvironment: 'jsdom',
   globals: {
     'ts-jest': {
       tsconfig: {
@@ -13,4 +13,8 @@ module.exports = {
     },
   },
   testMatch: ['**/__tests__/*.test.+(ts|tsx|js|jsx)'],
+  testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    url: 'http://localhost/',
+  },
 };
