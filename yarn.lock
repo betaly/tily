@@ -6151,9 +6151,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"np@npm:^7.6.2":
-  version: 7.6.2
-  resolution: "np@npm:7.6.2"
+"np@npm:^7.6.3":
+  version: 7.6.3
+  resolution: "np@npm:7.6.3"
   dependencies:
     "@samverschueren/stream-to-observable": ^0.3.1
     any-observable: ^0.5.1
@@ -6196,7 +6196,7 @@ __metadata:
     update-notifier: ^5.0.1
   bin:
     np: source/cli.js
-  checksum: 736e7434e2fceeffa8fa805d6882dcda020ee882bfe8a0f4d39abaec7016fa9bf12e4daa42649dd21533caa3bfad6acdefe5cf8d7bf177699fa0aedff8083c04
+  checksum: e887adf79269640629400ffba2c21c19262d79431076508195f0ca7e3f0e3a9c4f50f058402d0bf05f63c9eac840015c0d20386f67a3498961a206051b3d2dcb
   languageName: node
   linkType: hard
 
@@ -7893,7 +7893,7 @@ __metadata:
     jsdom: ^20.0.3
     lazy.js: ^0.5.1
     lodash: ^4.17.21
-    np: ^7.6.2
+    np: ^7.6.3
     prettier: ^2.8.1
     ramda: ^0.28.0
     react: ^18.2.0
