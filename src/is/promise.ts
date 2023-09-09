@@ -11,6 +11,7 @@ import isFunction from './function';
  *      isPromise({});                 //=> false
  *      isPromise(Promise.resolve());  //=> true
  */
-export const isPromise = (test): test is Promise<any> => (isObject(test) || isFunction(test)) && isFunction(test.then);
+export const isPromise = (test: unknown): test is Promise<any> =>
+  (isObject(test) || isFunction(test)) && isFunction((test as Promise<unknown>).then);
 
 export default isPromise;
