@@ -5,9 +5,9 @@ import {ObjBase, ObjBaseBy, Prop} from '../typings/types';
 interface KeyBy {
   <O, KT extends string>(fn: ObjBaseBy<O, KT>, obj: O): Record<KT, O[keyof O]>;
 
-  <K extends Prop, V, KT extends string>(fn: ObjBase<K, V, KT>): <O extends Record<K, V>>(
-    obj: O,
-  ) => Record<KT, O[keyof O]>;
+  <K extends Prop, V, KT extends string>(
+    fn: ObjBase<K, V, KT>,
+  ): <O extends Record<K, V>>(obj: O) => Record<KT, O[keyof O]>;
 }
 
 /**

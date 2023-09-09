@@ -20,22 +20,13 @@ interface Curry {
 
   <T1, T2, T3, TResult extends T3>(fn: (a: T1, b: T2, c: T3) => c is TResult): CurriedTypeGuard3<T1, T2, T3, TResult>;
 
-  <T1, T2, T3, T4, TResult extends T4>(fn: (a: T1, b: T2, c: T3, d: T4) => d is TResult): CurriedTypeGuard4<
-    T1,
-    T2,
-    T3,
-    T4,
-    TResult
-  >;
+  <T1, T2, T3, T4, TResult extends T4>(
+    fn: (a: T1, b: T2, c: T3, d: T4) => d is TResult,
+  ): CurriedTypeGuard4<T1, T2, T3, T4, TResult>;
 
-  <T1, T2, T3, T4, T5, TResult extends T5>(fn: (a: T1, b: T2, c: T3, d: T4, e: T5) => e is TResult): CurriedTypeGuard5<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    TResult
-  >;
+  <T1, T2, T3, T4, T5, TResult extends T5>(
+    fn: (a: T1, b: T2, c: T3, d: T4, e: T5) => e is TResult,
+  ): CurriedTypeGuard5<T1, T2, T3, T4, T5, TResult>;
 
   <T1, T2, T3, T4, T5, T6, TResult extends T6>(
     fn: (a: T1, b: T2, c: T3, d: T4, e: T5, f: T6) => f is TResult,
@@ -51,24 +42,13 @@ interface Curry {
 
   <T1, T2, T3, T4, TResult>(fn: (a: T1, b: T2, c: T3, d: T4) => TResult): CurriedFunction4<T1, T2, T3, T4, TResult>;
 
-  <T1, T2, T3, T4, T5, TResult>(fn: (a: T1, b: T2, c: T3, d: T4, e: T5) => TResult): CurriedFunction5<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    TResult
-  >;
+  <T1, T2, T3, T4, T5, TResult>(
+    fn: (a: T1, b: T2, c: T3, d: T4, e: T5) => TResult,
+  ): CurriedFunction5<T1, T2, T3, T4, T5, TResult>;
 
-  <T1, T2, T3, T4, T5, T6, TResult>(fn: (a: T1, b: T2, c: T3, d: T4, e: T5, f: T6) => TResult): CurriedFunction6<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    TResult
-  >;
+  <T1, T2, T3, T4, T5, T6, TResult>(
+    fn: (a: T1, b: T2, c: T3, d: T4, e: T5, f: T6) => TResult,
+  ): CurriedFunction6<T1, T2, T3, T4, T5, T6, TResult>;
 
   (fn: (...a: any[]) => any): (...a: any[]) => any;
 }

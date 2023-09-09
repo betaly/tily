@@ -3,13 +3,16 @@ import objectKeys from './keys';
 import {AnyArr, AnyObjOrArr, ObjBaseBy, ObjOrArrBaseBy, ObjValues} from '../typings/types';
 
 interface GroupBy {
-  <Fn extends ObjOrArrBaseBy<AnyObjOrArr, any>>(fn: Fn): <Input extends AnyObjOrArr>(
+  <Fn extends ObjOrArrBaseBy<AnyObjOrArr, any>>(
+    fn: Fn,
+  ): <Input extends AnyObjOrArr>(
     obj: Input,
   ) => Input extends AnyArr ? Record<ReturnType<Fn>, Input> : Record<ReturnType<Fn>, ObjValues<Input>[]>;
 
-  <Input extends AnyObjOrArr, Fn extends ObjOrArrBaseBy<Input, any>>(fn: Fn, obj: Input): Input extends AnyArr
-    ? Record<ReturnType<Fn>, Input>
-    : Record<ReturnType<Fn>, ObjValues<Input>[]>;
+  <Input extends AnyObjOrArr, Fn extends ObjOrArrBaseBy<Input, any>>(
+    fn: Fn,
+    obj: Input,
+  ): Input extends AnyArr ? Record<ReturnType<Fn>, Input> : Record<ReturnType<Fn>, ObjValues<Input>[]>;
 }
 
 /**

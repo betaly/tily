@@ -6,7 +6,9 @@ interface PropFunc {
 
   <K extends Prop>(prop: K, obj): undefined;
 
-  <K extends Prop>(prop: K): {
+  <K extends Prop>(
+    prop: K,
+  ): {
     <O extends Record<K, any>>(obj: O): O[K];
     (obj): undefined;
   };

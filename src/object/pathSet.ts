@@ -10,7 +10,9 @@ interface PathSet {
 
   <K extends Prop, V>(path: [K], value: V): <O>(obj: O) => ReplaceType<O, K, V>;
 
-  <K extends Prop>(path: [K]): {
+  <K extends Prop>(
+    path: [K],
+  ): {
     <V, O>(value: V, obj: O): ReplaceType<O, K, V>;
     <V>(value: V): <O>(obj: O) => ReplaceType<O, K, V>;
   };

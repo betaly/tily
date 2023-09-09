@@ -7,12 +7,17 @@ interface PropOr {
 
   <K extends Prop, V>(prop: K, value: V, obj): V;
 
-  <K extends Prop, V>(prop: K, value: V): {
+  <K extends Prop, V>(
+    prop: K,
+    value: V,
+  ): {
     <O extends Record<K, any>>(obj: O): O[K];
     (obj): V;
   };
 
-  <K extends Prop>(prop: K): {
+  <K extends Prop>(
+    prop: K,
+  ): {
     <V, O extends Record<K, any>>(value: V, obj: O): O[K];
     <V>(value: V): V;
     <V>(value: V): {

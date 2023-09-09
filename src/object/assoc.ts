@@ -6,7 +6,9 @@ interface Assoc {
 
   <K extends Prop, V>(prop: K, val: V): <O>(obj: O) => O & {[k in K]: V};
 
-  <K extends Prop>(prop: K): {
+  <K extends Prop>(
+    prop: K,
+  ): {
     <V, O>(val: V, obj: O): O & {[k in K]: V};
     <V>(val: V): <O>(obj: O) => O & {[k in K]: V};
   };

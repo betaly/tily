@@ -7,7 +7,9 @@ interface PropSet {
 
   <K extends Prop, V>(prop: K, val: V): <O>(obj: O) => ReplaceType<O, K, V>;
 
-  <K extends Prop>(prop: K): {
+  <K extends Prop>(
+    prop: K,
+  ): {
     <V, O>(val: V, obj: O): ReplaceType<O, K, V>;
     <V>(val: V): <O>(obj: O) => ReplaceType<O, K, V>;
   };

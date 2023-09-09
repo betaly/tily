@@ -7,7 +7,7 @@ describe('memoizeWith', () => {
 
     memoizeWith(
       createCache,
-      () => ({} as any),
+      () => ({}) as any,
       () => {},
     );
     expect(createCache).toHaveBeenCalled();

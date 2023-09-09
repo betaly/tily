@@ -10,7 +10,9 @@ interface PathSetBy {
 
   <K extends Prop, V, R>(path: [K], fn: ObjBase<K, V, R>): <O>(obj: O) => ReplaceType<O, K, R>;
 
-  <K extends Prop>(path: [K]): {
+  <K extends Prop>(
+    path: [K],
+  ): {
     <O extends Record<any, any>, R>(fn: ObjBase<K, O[K], R>, obj: O): ReplaceType<O, K, R>;
     <V, R>(fn: ObjBase<K, V, R>): <O>(obj: O) => ReplaceType<O, K, R>;
   };

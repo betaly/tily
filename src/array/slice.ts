@@ -6,7 +6,10 @@ interface Slice {
 
   <T>(a: number, b: number, list: ArrayLike<T>): T[];
 
-  (a: number, b: number): {
+  (
+    a: number,
+    b: number,
+  ): {
     (list: string): string;
     <T>(list: ArrayLike<T>): T[];
   };

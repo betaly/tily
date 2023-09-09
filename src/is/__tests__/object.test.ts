@@ -12,7 +12,10 @@ describe('is/object', () => {
 
   it('test type guard', () => {
     class Foo {
-      constructor(public a: number, public b: number) {}
+      constructor(
+        public a: number,
+        public b: number,
+      ) {}
     }
     const obj: any = new Foo(5, 3);
 

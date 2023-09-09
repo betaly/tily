@@ -7,7 +7,9 @@ interface PathApply {
 
   <K extends Prop, V, R>(path: [K], fn: ObjBase<K, V, R>): (obj) => R;
 
-  <K extends Prop>(path: [K]): {
+  <K extends Prop>(
+    path: [K],
+  ): {
     <O extends Record<K, any>, R>(fn: ObjBase<K, O[K], R>, obj: O): R;
     <V, R>(fn: ObjBase<K, V, R>): (obj) => R;
   };

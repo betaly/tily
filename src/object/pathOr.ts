@@ -7,12 +7,17 @@ interface PathOr {
 
   <K extends Prop, V>(path: [K], value: V, obj): V;
 
-  <K extends Prop, V>(path: [K], value: V): {
+  <K extends Prop, V>(
+    path: [K],
+    value: V,
+  ): {
     <O extends Record<K, any>>(obj: O): O[K];
     (obj): V;
   };
 
-  <K extends Prop>(path: [K]): {
+  <K extends Prop>(
+    path: [K],
+  ): {
     <V, O extends Record<K, any>>(value: V, obj: O): O[K];
     <V>(value: V, obj): V;
     <V>(value: V): {

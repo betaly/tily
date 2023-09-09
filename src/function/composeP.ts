@@ -9,15 +9,16 @@ interface ComposeP {
 
   <V0, V1, T1, T2>(fn1: (x: T1) => Promise<T2>, fn0: (x0: V0, x1: V1) => Promise<T1>): (x0: V0, x1: V1) => Promise<T2>;
 
-  <V0, V1, V2, T1, T2>(fn1: (x: T1) => Promise<T2>, fn0: (x0: V0, x1: V1, x2: V2) => Promise<T1>): (
-    x0: V0,
-    x1: V1,
-    x2: V2,
-  ) => Promise<T2>;
+  <V0, V1, V2, T1, T2>(
+    fn1: (x: T1) => Promise<T2>,
+    fn0: (x0: V0, x1: V1, x2: V2) => Promise<T1>,
+  ): (x0: V0, x1: V1, x2: V2) => Promise<T2>;
 
-  <V0, T1, T2, T3>(fn2: (x: T2) => Promise<T3>, fn1: (x: T1) => Promise<T2>, fn0: (x: V0) => Promise<T1>): (
-    x: V0,
-  ) => Promise<T3>;
+  <V0, T1, T2, T3>(
+    fn2: (x: T2) => Promise<T3>,
+    fn1: (x: T1) => Promise<T2>,
+    fn0: (x: V0) => Promise<T1>,
+  ): (x: V0) => Promise<T3>;
 
   <V0, V1, T1, T2, T3>(
     fn2: (x: T2) => Promise<T3>,
