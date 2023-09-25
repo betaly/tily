@@ -3,12 +3,12 @@ import {ArrBase} from '../typings/types';
 import isEmpty from '../is/empty';
 
 type MapKey = string | number;
-type MapBy<T, R = MapKey> = keyof T | (keyof T)[] | ArrBase<T, R>;
+type MapBy<T, K extends keyof T> = K | K[] | ArrBase<T, MapKey>;
 
 interface ArrayToObject {
-  <T, R extends MapKey>(mapBy: MapBy<T, R> | undefined | null, arr: ArrayLike<T>): T;
+  <T, K extends keyof T>(mapBy: MapBy<T, K> | undefined | null, arr: ArrayLike<T>): Record<MapKey, T>;
 
-  <T, R extends MapKey>(mapBy: MapBy<T, R> | undefined | null): (arr: ArrayLike<T>) => T;
+  <T, K extends keyof T>(mapBy: MapBy<T, K> | undefined | null): (arr: ArrayLike<T>) => Record<MapKey, T>;
 }
 
 /**
@@ -41,7 +41,7 @@ interface ArrayToObject {
  *     toObject('', [{id: 1, name: 'foo'}, {id: 2, name: 'bar'}]); //=> {0: {id: 1, name: 'foo'}, 1: {id: 2, name: 'bar'}}
  *     toObject([], [{id: 1, name: 'foo'}, {id: 2, name: 'bar'}]); //=> {0: {id: 1, name: 'foo'}, 1: {id: 2, name: 'bar'}}
  */
-export const toObject = curryN(2, <T>(mapBy: MapBy<T> | undefined, arr: ArrayLike<T>) => {
+export const toObject = curryN(2, <T, K extends keyof T>(mapBy: MapBy<T, K> | undefined | null, arr: ArrayLike<T>) => {
   if (!Array.isArray(arr)) {
     throw new TypeError('arr argument is not of type Array');
   }
