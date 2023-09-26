@@ -6,5 +6,8 @@ describe('template', () => {
     expect(template({ipsum: 'dolor', sit: 'amet'}, 'Lorem %{ipsum} dolor %{sit} amet')).toEqual(
       'Lorem dolor dolor amet amet',
     );
+    expect(template({ipsum: 'dolor', sit: 'amet'}, 'Lorem ${ipsum} dolor ${sit} amet')).toEqual(
+      'Lorem dolor dolor amet amet',
+    );
   });
 });

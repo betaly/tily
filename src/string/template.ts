@@ -15,6 +15,8 @@ interface Template {
  * @example
  *
  *      template({ fruit: 'banana' }, 'Petya has a %{fruit}') //=> Petya has a banana
+ *      template({ ipsum: 'dolor', sit: 'amet' }, 'Lorem %{ipsum} dolor %{sit} amet') //=> Lorem dolor dolor amet amet
+ *      template({ ipsum: 'dolor', sit: 'amet' }, 'Lorem ${ipsum} dolor ${sit} amet') //=> Lorem dolor dolor amet amet
  */
 export const template = curryN(2, (replacements = {}, str: string = '') =>
   str.replace(/[%$]\{.+?}/g, match => {
