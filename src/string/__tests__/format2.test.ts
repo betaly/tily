@@ -14,5 +14,9 @@ describe('string/format2', function () {
     );
     assert.strictEqual(format2('Foo {foo} Bar {bar}{boo}', {foo: 'bar', bar: '5', boo: false}), 'Foo bar Bar 5false');
     assert.strictEqual(format2('Foo {foo} Bar. {bar}', {foo: '(foo)', bar: '.test'}), 'Foo (foo) Bar. .test');
+    assert.strictEqual(
+      format2('Foo {foo} Bar. {bar} {{kong}}', {foo: '(foo)', bar: '.test'}),
+      'Foo (foo) Bar. .test {{kong}}',
+    );
   });
 });

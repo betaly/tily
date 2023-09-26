@@ -9,9 +9,9 @@ const _format2Regexp = /{([^}]+)}/g;
  *
  * @example
  *
- *      format2('Foo {foo} Bar {bar}{boo}', { foo: 'bar' });                       //=> 'Foo bar Bar {bar}{boo}'
- *      format2('Foo {foo} Bar {bar}{boo}', { foo: 'bar', bar: 'undefined' });     //=> 'Foo bar Bar undefined{boo}'
- *      format2('Foo {foo} Bar {bar}{boo}', { foo: 'bar', bar: '5', boo: false }); //=> 'Foo bar Bar 5false'
+ *      format2('Foo {foo} Bar {bar}{boo} {{kong}}', { foo: 'bar' });                       //=> 'Foo bar Bar {bar}{boo} {{kong}}'
+ *      format2('Foo {foo} Bar {bar}{boo} {{kong}}', { foo: 'bar', bar: 'undefined' });     //=> 'Foo bar Bar undefined{boo} {{kong}}'
+ *      format2('Foo {foo} Bar {bar}{boo} {{kong}}', { foo: 'bar', bar: '5', boo: false }); //=> 'Foo bar Bar 5false {{kong}}'
  */
 export function format2(template: string, values: Record<string, unknown>): string {
   return template.replace(_format2Regexp, (match, group) => (values[group] ?? match) as string);
