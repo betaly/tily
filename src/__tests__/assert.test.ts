@@ -11,11 +11,38 @@ describe('assert', function () {
     type Test = Assert<IsExact<Actual, string>>;
   });
 
+  it('assert with custom error message', function () {
+    type TestType1 = string | undefined;
+    type Expected = string;
+    const anything = undefined as any as TestType1;
+    expect(() => assert(anything, 'custom error')).toThrowError('Assertion Error: custom error');
+    type Actual = typeof anything;
+    type Test = Assert<IsExact<Actual, string>>;
+  });
+
   it('assert with custom error instance', function () {
     type TestType1 = string | undefined;
     type Expected = string;
     const anything = undefined as any as TestType1;
     expect(() => assert(anything, new Error('custom error'))).toThrowError('custom error');
+    type Actual = typeof anything;
+    type Test = Assert<IsExact<Actual, string>>;
+  });
+
+  it('assert with custom error message function', function () {
+    type TestType1 = string | undefined;
+    type Expected = string;
+    const anything = undefined as any as TestType1;
+    expect(() => assert(anything, () => 'custom error')).toThrowError('custom error');
+    type Actual = typeof anything;
+    type Test = Assert<IsExact<Actual, string>>;
+  });
+
+  it('assert with custom error message function that returns error instance', function () {
+    type TestType1 = string | undefined;
+    type Expected = string;
+    const anything = undefined as any as TestType1;
+    expect(() => assert(anything, () => new Error('custom error'))).toThrowError('custom error');
     type Actual = typeof anything;
     type Test = Assert<IsExact<Actual, string>>;
   });

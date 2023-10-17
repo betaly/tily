@@ -17,11 +17,21 @@
  * // from now on `anything` is string
  *
  */
-export function assert(condition: any, msg: string | Error = 'no additional info provided'): asserts condition {
+export function assert(
+  condition: any,
+  msg: string | Error | (() => string | Error) = 'no additional info provided',
+): asserts condition {
   if (!condition) {
     if (msg instanceof Error) {
       throw msg;
+    } else if (typeof msg === 'function') {
+      const error = msg();
+      if (error instanceof Error) {
+        throw error;
+      }
+      msg = error;
     }
+
     throw new Error('Assertion Error: ' + msg);
   }
 }
