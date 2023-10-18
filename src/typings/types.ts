@@ -47,6 +47,9 @@ export type Pattern = RegExp | string;
 
 export type ReplaceType<O, K extends Prop, V> = Pick<O, Exclude<keyof O, K>> & {[p in K]: V};
 
+export type ElementOf<T> = T extends Array<infer U> ? ElementOf<U> : T;
+export type NestedArrayLike<T> = ArrayLike<T | NestedArrayLike<ElementOf<T>>>;
+
 /**
  * Obtain the values type of a array
  */
