@@ -1,4 +1,5 @@
 import isArrayLike from '../is/arrayLike';
+import {NestedArrayLike} from '../typings/types';
 
 /**
  * Returns a new list by pulling every item out of it (and all its sub-arrays)
@@ -11,7 +12,7 @@ import isArrayLike from '../is/arrayLike';
  *      flatten([1, 2, [3, 4], 5, [6, [7, 8, [9, [10, 11], 12]]]]);
  *      //=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
  */
-export const flatten = <T>(arr: ArrayLike<any> = []): T[] => {
+export const flatten = <T>(arr: NestedArrayLike<T> = []): T[] => {
   const result = [];
 
   for (let i = 0; i < arr.length; i++) {
