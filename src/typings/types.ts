@@ -1,4 +1,4 @@
-export type Ord = number | string | boolean;
+export type Ord = number | string | boolean | Date;
 
 export type AnyObj = Record<any, any>;
 export type AnyArr = any[] | readonly any[];
