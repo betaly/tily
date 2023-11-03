@@ -50,6 +50,8 @@ export type ReplaceType<O, K extends Prop, V> = Pick<O, Exclude<keyof O, K>> & {
 export type ElementOf<T> = T extends Array<infer U> ? ElementOf<U> : T;
 export type NestedArrayLike<T> = ArrayLike<T | NestedArrayLike<ElementOf<T>>>;
 
+export type PromiseOrValue<T> = T | Promise<T>;
+
 /**
  * Obtain the values type of a array
  */
