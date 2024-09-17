@@ -1,4 +1,4 @@
-# Tily
+# tily
 
 > Fast, small and purely functional utility library.
 >
